@@ -77,6 +77,13 @@ export function DownloadSection() {
                   </Button>
                 </div>
 
+                <div className="text-center bg-muted/30 rounded-lg p-4 border border-muted">
+                  <p className="text-sm text-muted-foreground">
+                    <strong>System Requirements:</strong> Compatible with Windows 10 (April 2018 release or later) and
+                    Windows 11
+                  </p>
+                </div>
+
                 <div className="text-center">
                   <p className="text-xs sm:text-sm text-muted-foreground mb-4 px-2">
                     Need help getting started? Check out our documentation and community resources.

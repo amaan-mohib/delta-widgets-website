@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Heart, Coffee } from "lucide-react"
+import { Heart } from "lucide-react"
 
 export function SponsorSection() {
   return (
@@ -28,12 +27,13 @@ export function SponsorSection() {
                 </p>
 
                 <div className="flex justify-center">
-                  <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto" asChild>
-                    <a href="https://www.buymeacoffee.com/amaan.mohib" target="_blank" rel="noopener noreferrer">
-                      <Coffee className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                      Buy Me a Coffee
-                    </a>
-                  </Button>
+                  <a href="https://www.buymeacoffee.com/amaan.mohib" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                      alt="Buy Me A Coffee"
+                      style={{ height: "60px", width: "217px" }}
+                    />
+                  </a>
                 </div>
 
                 <p className="text-xs sm:text-sm text-muted-foreground px-2">
