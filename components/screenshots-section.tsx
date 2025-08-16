@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import { LayoutGrid } from "lucide-react"
 
 export function ScreenshotsSection() {
   return (
@@ -58,12 +59,8 @@ export function ScreenshotsSection() {
 
           <Card className="overflow-hidden h-full p-0">
             <CardContent className="p-0 h-full flex flex-col">
-              <div className="flex-shrink-0">
-                <img
-                  src="/widget-templates-gallery.png"
-                  alt="Widget Templates"
-                  className="w-full h-48 sm:h-56 object-cover"
-                />
+              <div className="flex-shrink-0 bg-muted/50 flex items-center justify-center h-48 sm:h-56">
+                <LayoutGrid className="w-16 h-16 sm:w-20 sm:h-20 text-primary" />
               </div>
               <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
                 <div>
