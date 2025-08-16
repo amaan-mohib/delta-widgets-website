@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   description:
     "Create beautiful, dynamic desktop widgets without coding. Drag-and-drop builder, custom templates, and real-time data integration.",
   generator: "v0.app",
+  icons: {
+    icon: "/delta-widgets-icon.png",
+    shortcut: "/delta-widgets-icon.png",
+    apple: "/delta-widgets-icon.png",
+  },
 }
 
 export default function RootLayout({
