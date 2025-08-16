@@ -18,6 +18,23 @@ export function HeroSection() {
             Create beautiful, dynamic desktop widgets without writing a single line of code. Drag-and-drop builder,
             custom templates, and real-time data integration—all completely free and open source.
           </p>
+
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://www.producthunt.com/products/delta-widgets?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-delta-widgets"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1005964&theme=dark&t=1755364439573"
+                alt="Delta Widgets - The Ultimate Widget Maker for Windows | Product Hunt"
+                style={{ width: "250px", height: "54px" }}
+                width="250"
+                height="54"
+              />
+            </a>
+          </div>
+
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button size="lg" className="px-8 py-3" asChild>
               <a
