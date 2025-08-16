@@ -1,20 +1,29 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
-})
+});
 
 export const metadata: Metadata = {
   title: "Delta Widgets - Ultimate Widget Maker for Windows",
   description:
     "Create beautiful, dynamic desktop widgets without coding. Drag-and-drop builder, custom templates, and real-time data integration.",
   generator: "v0.app",
-  keywords: ["widgets", "windows", "desktop", "customization", "drag-and-drop", "templates", "open-source"],
+  keywords: [
+    "widgets",
+    "windows",
+    "desktop",
+    "customization",
+    "drag-and-drop",
+    "templates",
+    "open-source",
+  ],
   authors: [{ name: "Amaan Mohib" }],
   creator: "Amaan Mohib",
   publisher: "Delta Widgets",
@@ -60,12 +69,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={`dark ${inter.variable}`}>
@@ -78,7 +87,10 @@ html {
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
-  )
+  );
 }
