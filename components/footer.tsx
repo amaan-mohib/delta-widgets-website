@@ -99,7 +99,9 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© 2024 Delta Widgets. Open source under GPL-3.0 License.</p>
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} Delta Widgets. Open source under GPL-3.0 License.
+          </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <a
               href="https://github.com/amaan-mohib/delta-widgets/blob/main/LICENSE"
