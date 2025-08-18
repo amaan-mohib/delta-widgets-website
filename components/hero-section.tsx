@@ -19,7 +19,7 @@ export function HeroSection() {
             custom templates, and real-time data integration—all completely free and open source.
           </p>
 
-          <div className="mt-8 flex justify-center">
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://www.producthunt.com/products/delta-widgets?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-delta-widgets"
               target="_blank"
@@ -31,6 +31,13 @@ export function HeroSection() {
                 style={{ width: "250px", height: "54px" }}
                 width="250"
                 height="54"
+              />
+            </a>
+            <a href="https://peerlist.io/amaanmohib/project/delta-widgets" target="_blank" rel="noreferrer">
+              <img
+                src="https://peerlist.io/api/v1/projects/embed/PRJHNN7Q9BE6QJJEOFKMJ9D9LJ6K6B?showUpvote=true&theme=dark"
+                alt="Delta Widgets"
+                style={{ width: "auto", height: "72px" }}
               />
             </a>
           </div>
