@@ -95,11 +95,7 @@ export function DownloadSection() {
                       className="text-xs sm:text-sm hover:bg-primary/10 hover:text-primary transition-colors"
                       asChild
                     >
-                      <a
-                        href="https://github.com/amaan-mohib/delta-widgets#readme"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      <a href="https://amaan-mohib.github.io/delta-widgets/" target="_blank" rel="noopener noreferrer">
                         Documentation <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
                       </a>
                     </Button>

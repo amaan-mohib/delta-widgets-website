@@ -9,7 +9,7 @@ export function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center space-x-3">
               <img src="/delta-widgets-icon.png" alt="Delta Widgets" className="h-8 w-8" />
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent [&:not(:has(.gradient-fallback))]:text-foreground">
                 Delta Widgets
               </h1>
             </div>

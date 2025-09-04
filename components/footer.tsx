@@ -20,7 +20,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://github.com/amaan-mohib/delta-widgets#readme"
+                  href="https://amaan-mohib.github.io/delta-widgets/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
