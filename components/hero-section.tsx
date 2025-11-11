@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Download, Github } from "lucide-react"
+import { Download, Github, Users } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -19,27 +19,11 @@ export function HeroSection() {
             custom templates, and real-time data integration—all completely free and open source.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="https://www.producthunt.com/products/delta-widgets?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-delta-widgets"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1005964&theme=dark&t=1755364439573"
-                alt="Delta Widgets - The Ultimate Widget Maker for Windows | Product Hunt"
-                style={{ width: "250px", height: "54px" }}
-                width="250"
-                height="54"
-              />
-            </a>
-            <a href="https://peerlist.io/amaanmohib/project/delta-widgets" target="_blank" rel="noreferrer">
-              <img
-                src="https://peerlist.io/api/v1/projects/embed/PRJHNN7Q9BE6QJJEOFKMJ9D9LJ6K6B?showUpvote=true&theme=dark"
-                alt="Delta Widgets"
-                style={{ width: "auto", height: "72px" }}
-              />
-            </a>
+          <div className="mt-8 flex items-center justify-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <Users className="h-4 w-4 text-primary" />
+              <span className="text-sm font-semibold text-foreground">100+ installs</span>
+            </div>
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -68,7 +52,7 @@ export function HeroSection() {
           <div className="mt-16">
             <img
               className="mx-auto rounded-xl shadow-2xl ring-1 ring-border"
-              src="https://raw.githubusercontent.com/amaan-mohib/delta-widgets/refs/heads/main/ss-1.png"
+              src="/images/design-mode/ss-1.png"
               alt="Delta Widgets on Windows Desktop"
               width={800}
               height={400}

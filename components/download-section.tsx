@@ -16,6 +16,41 @@ export function DownloadSection() {
             Download Delta Widgets and start creating beautiful desktop widgets in minutes. It's completely free and
             open source.
           </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.producthunt.com/products/delta-widgets?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-delta-widgets"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1005964&theme=dark&t=1755364439573"
+                alt="Delta Widgets - The Ultimate Widget Maker for Windows | Product Hunt"
+                style={{ width: "250px", height: "54px" }}
+                width="250"
+                height="54"
+              />
+            </a>
+            <a href="https://peerlist.io/amaanmohib/project/delta-widgets" target="_blank" rel="noreferrer">
+              <img
+                src="https://peerlist.io/api/v1/projects/embed/PRJHNN7Q9BE6QJJEOFKMJ9D9LJ6K6B?showUpvote=true&theme=dark"
+                alt="Delta Widgets"
+                style={{ width: "auto", height: "54px" }}
+              />
+            </a>
+            <a
+              href="https://scoutforge.net/reviews/delta-widgets/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Trusted and reviewed by Scout Forge"
+            >
+              <img
+                src="/images/design-mode/badge-dark.webp"
+                style={{ height: "54px" }}
+                alt="Trusted and Reviewed by Scout Forge"
+              />
+            </a>
+          </div>
         </div>
 
         <div className="flex justify-center">

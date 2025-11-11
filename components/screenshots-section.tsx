@@ -21,7 +21,7 @@ export function ScreenshotsSection() {
             <CardContent className="p-0 h-full flex flex-col">
               <div className="flex-shrink-0">
                 <img
-                  src="https://raw.githubusercontent.com/amaan-mohib/delta-widgets/refs/heads/main/ss-1.png"
+                  src="/images/design-mode/ss-1.png"
                   alt="Desktop with Delta Widgets"
                   className="w-full h-48 sm:h-56 object-cover"
                 />
@@ -41,7 +41,7 @@ export function ScreenshotsSection() {
             <CardContent className="p-0 h-full flex flex-col">
               <div className="flex-shrink-0">
                 <img
-                  src="https://raw.githubusercontent.com/amaan-mohib/delta-widgets/refs/heads/main/ss-creator.png"
+                  src="/images/design-mode/ss-creator.png"
                   alt="Widget Creator Interface"
                   className="w-full h-48 sm:h-56 object-cover"
                 />

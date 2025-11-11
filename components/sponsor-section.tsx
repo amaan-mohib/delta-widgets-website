@@ -29,7 +29,7 @@ export function SponsorSection() {
                 <div className="flex justify-center">
                   <a href="https://www.buymeacoffee.com/amaan.mohib" target="_blank" rel="noopener noreferrer">
                     <img
-                      src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+                      src="/images/design-mode/default-yellow.png"
                       alt="Buy Me A Coffee"
                       style={{ height: "60px", width: "217px" }}
                     />
