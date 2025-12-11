@@ -23,7 +23,7 @@ export function ScreenshotsSection() {
                 <img
                   src="/images/design-mode/ss-1.png"
                   alt="Desktop with Delta Widgets"
-                  className="w-full h-48 sm:h-56 object-cover"
+                  className="w-full h-48 sm:h-56 object-contain bg-black"
                 />
               </div>
               <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
@@ -43,7 +43,7 @@ export function ScreenshotsSection() {
                 <img
                   src="/images/design-mode/ss-creator.png"
                   alt="Widget Creator Interface"
-                  className="w-full h-48 sm:h-56 object-cover"
+                  className="w-full h-48 sm:h-56 object-contain bg-black"
                 />
               </div>
               <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
@@ -59,8 +59,12 @@ export function ScreenshotsSection() {
 
           <Card className="overflow-hidden h-full p-0">
             <CardContent className="p-0 h-full flex flex-col">
-              <div className="flex-shrink-0 bg-muted/50 flex items-center justify-center h-48 sm:h-56">
-                <LayoutGrid className="w-16 h-16 sm:w-20 sm:h-20 text-primary" />
+              <div className="flex-shrink-0">
+                <img
+                  src="/images/design-mode/widget_templates_thumb.png"
+                  alt="Widget Creator Interface"
+                  className="w-full h-48 sm:h-56 object-contain bg-black"
+                />
               </div>
               <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
                 <div>
