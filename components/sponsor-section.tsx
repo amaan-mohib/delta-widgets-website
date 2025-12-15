@@ -35,7 +35,6 @@ export function SponsorSection() {
                     />
                   </a>
                 </div>
-
                 <p className="text-xs sm:text-sm text-muted-foreground px-2">
                   Every contribution, no matter how small, helps maintain and improve Delta Widgets for the community.
                 </p>
