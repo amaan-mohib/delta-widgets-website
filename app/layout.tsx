@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     "drag-and-drop",
     "templates",
     "open-source",
+    "media-widget",
+    "date-and-time-widget",
   ],
   authors: [{ name: "Amaan Mohib" }],
   creator: "Amaan Mohib",
