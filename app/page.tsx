@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { FeaturesSection } from "@/components/features-section"
 import { ScreenshotsSection } from "@/components/screenshots-section"
+import { WidgetsGallery } from "@/components/widgets-gallery"
 import { DownloadSection } from "@/components/download-section"
 import { SponsorSection } from "@/components/sponsor-section"
 import { FaqSection } from "@/components/faq-section"
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroSection />
         <FeaturesSection />
         <ScreenshotsSection />
+        <WidgetsGallery />
         <DownloadSection />
         <SponsorSection />
         <FaqSection />
