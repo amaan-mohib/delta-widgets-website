@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink, MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
@@ -66,6 +66,16 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
+                  href="https://discord.gg/wDE8KNx8fB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+                >
+                  Discord <ExternalLink className="h-3 w-3 ml-1" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://github.com/amaan-mohib/delta-widgets/blob/main/CONTRIBUTING.md"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -119,6 +129,14 @@ export function Footer() {
                 className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
               >
                 <Github className="h-4 w-4" />
+              </a>
+              <a
+                href="https://discord.gg/wDE8KNx8fB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+              >
+                <MessageCircle className="h-4 w-4" />
               </a>
             </div>
           </div>

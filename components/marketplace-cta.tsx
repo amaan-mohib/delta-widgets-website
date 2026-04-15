@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 export function MarketplaceCta() {
   return (
@@ -15,16 +15,28 @@ export function MarketplaceCta() {
           <p className="text-sm text-muted-foreground mb-8 italic">
             Join the waitlist to be among the first to create and monetize your widget templates.
           </p>
-          <a
-            href="https://forms.gle/Y7ni54Eknp599nG6A"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button size="lg" className="gap-2">
-              Join Marketplace Waitlist
-              <ArrowRight className="w-4 h-4" />
-            </Button>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://forms.gle/Y7ni54Eknp599nG6A"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="gap-2">
+                Join Marketplace Waitlist
+                <ArrowRight className="w-4 h-4" />
+              </Button>
+            </a>
+            <a
+              href="https://discord.gg/wDE8KNx8fB"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="outline" className="gap-2 bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary">
+                <MessageCircle className="w-4 h-4" />
+                Join Discord
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
