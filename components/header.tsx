@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Github } from "lucide-react"
+import { Github, MessageCircle } from "lucide-react"
 
 export function Header() {
   return (
@@ -45,6 +45,16 @@ export function Header() {
           </nav>
 
           <div className="flex items-center space-x-2 sm:space-x-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hidden sm:inline-flex text-muted-foreground hover:text-primary transition-colors"
+              asChild
+            >
+              <a href="https://discord.gg/wDE8KNx8fB" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-4 w-4" />
+              </a>
+            </Button>
             <Button
               variant="outline"
               size="sm"
