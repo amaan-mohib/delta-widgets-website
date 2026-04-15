@@ -21,7 +21,7 @@ export function MarketplaceCta() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="gap-2">
+              <Button size="lg" className="gap-2 cursor-pointer">
                 Join Marketplace Waitlist
                 <ArrowRight className="w-4 h-4" />
               </Button>
@@ -31,7 +31,7 @@ export function MarketplaceCta() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" variant="outline" className="gap-2 bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary">
+              <Button size="lg" variant="outline" className="gap-2 bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary cursor-pointer">
                 <MessageCircle className="w-4 h-4" />
                 Join Discord
               </Button>
