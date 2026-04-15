@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Download, Github, Users } from "lucide-react"
+import { Download, Github, Users, Sparkles } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -26,7 +26,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-4">
             <Button size="lg" className="px-8 py-3" asChild>
               <a
                 href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
@@ -46,6 +46,25 @@ export function HeroSection() {
               <a href="https://github.com/amaan-mohib/delta-widgets" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5 mr-2" />
                 View Source
+              </a>
+            </Button>
+          </div>
+
+          <div className="mt-8 pt-8 border-t border-border">
+            <p className="text-sm text-muted-foreground mb-4">Interested in buying or selling widgets?</p>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-primary hover:bg-primary/10"
+              asChild
+            >
+              <a
+                href="https://forms.gle/Y7ni54Eknp599nG6A"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Sparkles className="h-4 w-4 mr-2" />
+                Join Marketplace Waitlist
               </a>
             </Button>
           </div>
