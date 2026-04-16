@@ -51,7 +51,7 @@ export function HeroSection() {
           </div>
 
           <div className="mt-8 pt-8 border-t border-border">
-            <p className="text-sm text-muted-foreground mb-4">Help shape our template community</p>
+            <p className="text-sm text-muted-foreground mb-4">Help shape our widget community</p>
             <Button
               variant="ghost"
               size="sm"
