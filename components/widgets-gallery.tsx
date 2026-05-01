@@ -26,6 +26,12 @@ const widgets = [
     image: "/templates/media/thumb.png",
   },
   {
+    name: "Audio Visualizer",
+    description:
+      "A widget that visualizes the any currently playing media in the form of bars or waveforms.",
+    image: "/templates/visualizer/thumb.png",
+  },
+  {
     name: "Weather",
     description:
       "A widget that displays current weather information for your current location.",
