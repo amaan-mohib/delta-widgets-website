@@ -28,7 +28,7 @@ const widgets = [
   {
     name: "Audio Visualizer",
     description:
-      "A widget that visualizes the any currently playing media in the form of bars or waveforms.",
+      "A widget that visualizes the audio of currently playing media in the form of bars or waveforms.",
     image: "/templates/visualizer/thumb.png",
   },
   {
