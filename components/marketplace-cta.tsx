@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@fluentui/react-components";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import DiscordIcon from "./Discord";
 
 export function MarketplaceCta() {
   return (
@@ -10,32 +11,36 @@ export function MarketplaceCta() {
             Widget Marketplace Coming Soon
           </h2>
           <p className="text-lg text-muted-foreground mb-6">
-            We&apos;re building a community marketplace where creators can share, buy, and sell custom widgets. This waitlist helps us gauge interest and prioritize development.
+            We&apos;re building a community marketplace where creators can
+            share, buy, and sell custom widgets. This waitlist helps us gauge
+            interest and prioritize development.
           </p>
           <p className="text-sm text-muted-foreground mb-8 italic">
-            Join the waitlist to be among the first to create and monetize your widgets.
+            Join the waitlist to be among the first to create and monetize your
+            widgets.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
+            <Button
+              as="a"
               href="https://forms.gle/Y7ni54Eknp599nG6A"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <Button size="lg" className="gap-2 cursor-pointer">
-                Join Marketplace Waitlist
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </a>
-            <a
+              size="large"
+              icon={<ArrowRight style={{ width: 20 }} />}
+              iconPosition="after"
+              appearance="primary">
+              Join Marketplace Waitlist
+            </Button>
+            <Button
+              as="a"
               href="https://discord.gg/wDE8KNx8fB"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              <Button size="lg" variant="outline" className="gap-2 bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary cursor-pointer">
-                <MessageCircle className="w-4 h-4" />
-                Join Discord
-              </Button>
-            </a>
+              size="large"
+              appearance="outline"
+              icon={<DiscordIcon style={{ width: 20 }} />}>
+              Join Discord
+            </Button>
           </div>
         </div>
       </div>

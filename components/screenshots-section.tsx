@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { LayoutGrid } from "lucide-react";
+import { Card, CardHeader, CardPreview } from "@fluentui/react-components";
 
 const items = [
   {
@@ -24,12 +23,12 @@ const items = [
 
 export function ScreenshotsSection() {
   return (
-    <section id="screenshots" className="py-16 sm:py-20 lg:py-32 bg-muted/30">
+    <section id="screenshots" className="py-16 sm:py-20 lg:py-32 bg-muted/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             See Delta Widgets in{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
               Action
             </span>
           </h2>
@@ -41,26 +40,26 @@ export function ScreenshotsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {items.map((item) => (
-            <Card className="overflow-hidden h-full p-0" key={item.title}>
-              <CardContent className="p-0 h-full flex flex-col">
-                <div className="flex-shrink-0">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-48 sm:h-56 object-contain bg-muted"
-                  />
-                </div>
-                <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
+            <Card key={item.title} appearance="filled-alternative" size="large">
+              <CardPreview>
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-48 sm:h-56 object-contain bg-muted"
+                />
+              </CardPreview>
+              <CardHeader
+                header={
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                    {item.title}
+                  </h3>
+                }
+                description={
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    {item.description}
+                  </p>
+                }
+              />
             </Card>
           ))}
         </div>

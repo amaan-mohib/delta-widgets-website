@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Download, Github, Users, Sparkles } from "lucide-react"
+import { Button, Divider } from "@fluentui/react-components";
+import { Download, Github, Users, Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -9,67 +10,67 @@ export function HeroSection() {
         <div className="mx-auto max-w-4xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
             The Ultimate{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent [&:not(:has(.gradient-fallback))]:text-primary">
+            <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent [&:not(:has(.gradient-fallback))]:text-primary">
               Widget Maker
             </span>{" "}
             for Windows
           </h1>
           <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-            Create beautiful, dynamic desktop widgets without writing a single line of code. Drag-and-drop builder,
-            custom templates, and real-time data integration—all completely free and open source.
+            Create beautiful, dynamic desktop widgets without writing a single
+            line of code. Drag-and-drop builder, custom templates, and real-time
+            data integration—all completely free and open source.
           </p>
 
           <div className="mt-8 flex items-center justify-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
               <Users className="h-4 w-4 text-primary" />
-              <span className="text-sm font-semibold text-foreground">1000+ installs</span>
+              <span className="text-sm font-semibold text-foreground">
+                1200+ installs
+              </span>
             </div>
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-4">
-            <Button size="lg" className="px-8 py-3" asChild>
-              <a
-                href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="h-5 w-5 mr-2" />
-                Download Free
-              </a>
+            <Button
+              size="large"
+              as="a"
+              href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
+              appearance="primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              icon={<Download style={{ width: 20 }} />}>
+              Download Free
             </Button>
             <Button
-              variant="outline"
-              size="lg"
-              className="px-8 py-3 bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary"
-              asChild
-            >
-              <a href="https://github.com/amaan-mohib/delta-widgets" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 mr-2" />
-                View Source
-              </a>
+              appearance="outline"
+              size="large"
+              as="a"
+              icon={<Github style={{ width: 20 }} />}
+              href="https://github.com/amaan-mohib/delta-widgets"
+              target="_blank"
+              rel="noopener noreferrer">
+              View Source
             </Button>
           </div>
-
-          <div className="mt-8 pt-8 border-t border-border">
-            <p className="text-sm text-muted-foreground mb-4">Help shape our widget community</p>
+          <div className="mt-8 mb-8">
+            <Divider />
+          </div>
+          <div>
+            <p className="text-sm text-muted-foreground mb-4">
+              Help shape our widget community
+            </p>
             <Button
-              variant="ghost"
-              size="sm"
-              className="text-primary hover:bg-primary/10"
-              asChild
-            >
-              <a
-                href="https://forms.gle/Y7ni54Eknp599nG6A"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Sparkles className="h-4 w-4 mr-2" />
-                Join Marketplace Waitlist
-              </a>
+              appearance="subtle"
+              icon={<Sparkles style={{ width: 16 }} />}
+              as="a"
+              href="https://forms.gle/Y7ni54Eknp599nG6A"
+              target="_blank"
+              rel="noopener noreferrer">
+              Join Marketplace Waitlist
             </Button>
           </div>
           <div className="mt-16">
-            <img
+            <Image
               className="mx-auto rounded-xl shadow-2xl ring-1 ring-border"
               src="/images/design-mode/ss-1.png"
               alt="Delta Widgets on Windows Desktop"
@@ -80,5 +81,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

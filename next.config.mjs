@@ -6,9 +6,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    unoptimized: true,
+  experimental: {
+    optimizePackageImports: ["@fluentui/react-components"],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

@@ -1,7 +1,13 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Download, Github, ExternalLink, CheckCircle } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Download, Github, ExternalLink, CheckCircle } from "lucide-react";
+import { Button } from "@fluentui/react-components";
 
 export function DownloadSection() {
   return (
@@ -10,19 +16,20 @@ export function DownloadSection() {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Get Started{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Today</span>
+            <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Today
+            </span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-            Download Delta Widgets and start creating beautiful desktop widgets in minutes. It's completely free and
-            open source.
+            Download Delta Widgets and start creating beautiful desktop widgets
+            in minutes. It's completely free and open source.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="https://www.producthunt.com/products/delta-widgets?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-delta-widgets"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <img
                 src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1005964&theme=dark&t=1755364439573"
                 alt="Delta Widgets - The Ultimate Widget Maker for Windows | Product Hunt"
@@ -31,7 +38,10 @@ export function DownloadSection() {
                 height="54"
               />
             </a>
-            <a href="https://peerlist.io/amaanmohib/project/delta-widgets" target="_blank" rel="noreferrer">
+            <a
+              href="https://peerlist.io/amaanmohib/project/delta-widgets"
+              target="_blank"
+              rel="noreferrer">
               <img
                 src="https://peerlist.io/api/v1/projects/embed/PRJHNN7Q9BE6QJJEOFKMJ9D9LJ6K6B?showUpvote=true&theme=dark"
                 alt="Delta Widgets"
@@ -42,8 +52,7 @@ export function DownloadSection() {
               href="https://scoutforge.net/reviews/delta-widgets/"
               target="_blank"
               rel="noopener noreferrer"
-              title="Trusted and reviewed by Scout Forge"
-            >
+              title="Trusted and reviewed by Scout Forge">
               <img
                 src="/images/design-mode/badge-dark.webp"
                 style={{ height: "54px" }}
@@ -58,11 +67,15 @@ export function DownloadSection() {
             <Card className="border-2 border-primary/20 shadow-2xl">
               <CardHeader className="text-center pb-6 sm:pb-8 px-4 sm:px-6">
                 <div className="flex justify-center mb-4">
-                  <Badge variant="secondary" className="text-xs sm:text-sm px-3 sm:px-4 py-2">
+                  <Badge
+                    variant="secondary"
+                    className="text-xs sm:text-sm px-3 sm:px-4 py-2">
                     Latest Release
                   </Badge>
                 </div>
-                <CardTitle className="text-xl sm:text-2xl md:text-3xl">Delta Widgets for Windows</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl md:text-3xl">
+                  Delta Widgets for Windows
+                </CardTitle>
                 <CardDescription className="text-base sm:text-lg">
                   Free • Open Source • No Registration Required
                 </CardDescription>
@@ -71,82 +84,80 @@ export function DownloadSection() {
               <CardContent className="space-y-6 sm:space-y-8 px-4 sm:px-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">Windows 10/11 Compatible</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 shrink-0" />
+                    <span className="text-sm sm:text-base">
+                      Windows 10/11 Compatible
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">Lightweight & Fast</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 shrink-0" />
+                    <span className="text-sm sm:text-base">
+                      Lightweight & Fast
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3 sm:col-span-2 lg:col-span-1">
-                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">No Coding Required</span>
+                    <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 shrink-0" />
+                    <span className="text-sm sm:text-base">
+                      No Coding Required
+                    </span>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <Button
-                    size="lg"
-                    className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 w-full sm:w-auto hover:bg-primary/90 transition-colors"
-                    asChild
-                  >
-                    <a
-                      href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Download className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                      Download Latest Release
-                    </a>
+                    appearance="primary"
+                    size="large"
+                    as="a"
+                    href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    icon={<Download style={{ width: 20 }} />}>
+                    Download Latest Release
                   </Button>
                   <Button
-                    variant="outline"
-                    size="lg"
-                    className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 bg-transparent hover:bg-primary/10 hover:text-primary hover:border-primary transition-all duration-200 w-full sm:w-auto"
-                    asChild
-                  >
-                    <a href="https://github.com/amaan-mohib/delta-widgets" target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                      View Source Code
-                    </a>
+                    appearance="outline"
+                    size="large"
+                    as="a"
+                    href="https://github.com/amaan-mohib/delta-widgets"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    icon={<Github style={{ width: 20 }} />}>
+                    View Source Code
                   </Button>
                 </div>
 
-                <div className="text-center bg-muted/30 rounded-lg p-4 border border-muted">
+                <div className="text-center bg-muted/80 rounded-lg p-4 border border-muted">
                   <p className="text-sm text-muted-foreground">
-                    <strong>System Requirements:</strong> Compatible with Windows 10 (April 2018 release or later) and
-                    Windows 11
+                    <strong>System Requirements:</strong> Compatible with
+                    Windows 10 (April 2018 release or later) and Windows 11
                   </p>
                 </div>
 
                 <div className="text-center">
                   <p className="text-xs sm:text-sm text-muted-foreground mb-4 px-2">
-                    Need help getting started? Check out our documentation and community resources.
+                    Need help getting started? Check out our documentation and
+                    community resources.
                   </p>
                   <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
                     <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-xs sm:text-sm hover:bg-primary/10 hover:text-primary transition-colors"
-                      asChild
-                    >
-                      <a href="https://amaan-mohib.github.io/delta-widgets/" target="_blank" rel="noopener noreferrer">
-                        Documentation <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
-                      </a>
+                      appearance="transparent"
+                      as="a"
+                      href="https://amaan-mohib.github.io/delta-widgets/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      icon={<ExternalLink style={{ width: 16 }} />}
+                      iconPosition="after">
+                      Documentation
                     </Button>
                     <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-xs sm:text-sm hover:bg-primary/10 hover:text-primary transition-colors"
-                      asChild
-                    >
-                      <a
-                        href="https://github.com/amaan-mohib/delta-widgets/issues"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Report Issues <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
-                      </a>
+                      appearance="transparent"
+                      as="a"
+                      href="https://github.com/amaan-mohib/delta-widgets/issues"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      icon={<ExternalLink style={{ width: 16 }} />}
+                      iconPosition="after">
+                      Report Issues
                     </Button>
                   </div>
                 </div>
@@ -156,5 +167,5 @@ export function DownloadSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

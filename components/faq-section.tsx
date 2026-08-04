@@ -1,4 +1,9 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export function FaqSection() {
   const faqs = [
@@ -12,7 +17,8 @@ export function FaqSection() {
         },
         {
           question: "Can I use existing websites as widgets?",
-          answer: "Yes! You can display a custom HTML page or even embed a live URL directly as a widget.",
+          answer:
+            "Yes! You can display a custom HTML page or even embed a live URL directly as a widget.",
         },
         {
           question: "Does it slow down my PC?",
@@ -21,7 +27,8 @@ export function FaqSection() {
         },
         {
           question: "Can I share widgets I make?",
-          answer: "Yes! Widgets can be exported and shared as templates so others can use or customize them.",
+          answer:
+            "Yes! Widgets can be exported and shared as templates so others can use or customize them.",
         },
       ],
     },
@@ -60,7 +67,8 @@ export function FaqSection() {
         },
         {
           question: "Are there pre-made widgets I can use?",
-          answer: "Yes! You can start with ready-made templates or build your own from scratch.",
+          answer:
+            "Yes! You can start with ready-made templates or build your own from scratch.",
         },
       ],
     },
@@ -74,15 +82,17 @@ export function FaqSection() {
         },
         {
           question: "Will it always be free?",
-          answer: "The base app will remain free to use. Premium templates and add-ons may be introduced later.",
+          answer:
+            "The base app will remain free to use. Premium templates and add-ons may be introduced later.",
         },
         {
           question: "Is it safe to run?",
-          answer: "Yes. Tauri apps are secure by design, with limited API access and strong sandboxing.",
+          answer:
+            "Yes. Tauri apps are secure by design, with limited API access and strong sandboxing.",
         },
       ],
     },
-  ]
+  ];
 
   return (
     <section id="faq" className="py-16 sm:py-20 lg:py-32 bg-background">
@@ -90,7 +100,9 @@ export function FaqSection() {
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Frequently Asked{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Questions</span>
+            <span className="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Questions
+            </span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
             Everything you need to know about Delta Widgets
@@ -100,18 +112,21 @@ export function FaqSection() {
         <div className="max-w-4xl mx-auto">
           {faqs.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-8">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-primary">{category.category}</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-primary">
+                {category.category}
+              </h3>
               <Accordion type="single" collapsible className="space-y-2">
                 {category.questions.map((faq, index) => (
                   <AccordionItem
                     key={index}
                     value={`${categoryIndex}-${index}`}
-                    className="border border-border rounded-lg px-4 [&:last-child]:border-b"
-                  >
+                    className="border border-border rounded-lg px-4 last:border-b">
                     <AccordionTrigger className="text-left hover:no-underline py-4">
                       <span className="font-medium">{faq.question}</span>
                     </AccordionTrigger>
-                    <AccordionContent className="pb-4 text-muted-foreground">{faq.answer}</AccordionContent>
+                    <AccordionContent className="pb-4 text-muted-foreground">
+                      {faq.answer}
+                    </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -120,5 +135,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

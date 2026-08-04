@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { Providers } from "./providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,7 +15,6 @@ export const metadata: Metadata = {
   title: "Delta Widgets - Ultimate Widget Maker for Windows",
   description:
     "Create beautiful, dynamic desktop widgets without coding. Drag-and-drop builder, custom templates, and real-time data integration.",
-  generator: "v0.app",
   keywords: [
     "widgets",
     "windows",
@@ -49,6 +49,10 @@ export const metadata: Metadata = {
         height: 512,
         alt: "Delta Widgets Logo",
       },
+      {
+        url: "/images/design-mode/ss-1.png",
+        alt: "Delta Widgets Logo",
+      },
     ],
   },
   twitter: {
@@ -58,7 +62,7 @@ export const metadata: Metadata = {
     title: "Delta Widgets - Ultimate Widget Maker for Windows",
     description:
       "Create beautiful, dynamic desktop widgets without coding. Drag-and-drop builder, custom templates, and real-time data integration.",
-    images: ["/delta-widgets-icon.png"],
+    images: ["/images/design-mode/ss-1.png", "/delta-widgets-icon.png"],
   },
   robots: {
     index: true,
@@ -90,7 +94,7 @@ html {
         `}</style>
       </head>
       <body>
-        {children}
+        <Providers>{children}</Providers>
         <Analytics />
       </body>
     </html>

@@ -1,6 +1,10 @@
-import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardHeader,
+  CardPreview,
+  Link,
+} from "@fluentui/react-components";
 
 const widgets = [
   {
@@ -8,10 +12,7 @@ const widgets = [
     description: (
       <span>
         A widget that current date and time. Please{" "}
-        <Link
-          href="https://date-fns.org/docs/format"
-          target="_blank"
-          className="text-primary hover:underline">
+        <Link href="https://date-fns.org/docs/format" target="_blank">
           refer
         </Link>{" "}
         for formatting options.
@@ -65,7 +66,7 @@ const widgets = [
 
 export function WidgetsGallery() {
   return (
-    <section id="widgets" className="py-24 bg-muted/30">
+    <section id="widgets" className="py-24 bg-muted/80">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
           <Badge className="mb-4">Pre-installed</Badge>
@@ -80,26 +81,39 @@ export function WidgetsGallery() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {widgets.map((item) => (
-            <Card className="overflow-hidden h-full p-0" key={item.name}>
-              <CardContent className="p-0 h-full flex flex-col">
-                <div className="flex-shrink-0">
+            <Card key={item.name} appearance="filled-alternative" size="large">
+              <CardPreview>
+                <div className="shrink-0">
                   <img
                     src={item.image}
                     alt={item.name}
                     className="w-full h-48 sm:h-56 object-contain bg-muted p-2"
                   />
                 </div>
+              </CardPreview>
+              <CardHeader
+                header={
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                    {item.name}
+                  </h3>
+                }
+                description={
+                  <p className="text-sm sm:text-base text-muted-foreground">
+                    {item.description}
+                  </p>
+                }
+              />
+              {/* <CardContent className="p-0 h-full flex flex-col">
+                <div className="shrink-0">
+
+                </div>
                 <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
                   <div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-2">
-                      {item.name}
-                    </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground">
-                      {item.description}
-                    </p>
+
+
                   </div>
                 </div>
-              </CardContent>
+              </CardContent> */}
             </Card>
           ))}
         </div>
