@@ -1,3 +1,4 @@
+import { APP_NAME } from "@/lib/utils";
 import { Button, Divider } from "@fluentui/react-components";
 import { Download, Github, Users, Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -34,10 +35,8 @@ export function HeroSection() {
             <Button
               size="large"
               as="a"
-              href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
+              href="/releases/latest"
               appearance="primary"
-              target="_blank"
-              rel="noopener noreferrer"
               icon={<Download style={{ width: 20 }} />}>
               Download Free
             </Button>
@@ -71,9 +70,10 @@ export function HeroSection() {
           </div>
           <div className="mt-16">
             <Image
-              className="mx-auto rounded-xl shadow-2xl ring-1 ring-border"
+              loading="eager"
+              className="mx-auto rounded-xl shadow-2xl ring-1 ring-border w-auto h-auto"
               src="/images/design-mode/ss-1.png"
-              alt="Delta Widgets on Windows Desktop"
+              alt={`${APP_NAME} on Windows Desktop`}
               width={800}
               height={400}
             />

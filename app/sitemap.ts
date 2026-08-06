@@ -1,0 +1,56 @@
+import { getReleases } from "@/lib/data";
+import { WEBSITE_URL } from "@/lib/utils";
+import type { MetadataRoute } from "next";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const { releases, latest } = await getReleases();
+
+  const data: MetadataRoute.Sitemap = [
+    {
+      url: WEBSITE_URL + "/",
+      lastModified: new Date().toISOString(),
+      changeFrequency: "weekly",
+      priority: 1,
+      images: [WEBSITE_URL + "/images/design-mode/ss-1.png"],
+    },
+    {
+      url: WEBSITE_URL + "/releases",
+      lastModified: new Date(
+        releases[latest.tag_name].published_at,
+      ).toISOString(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: WEBSITE_URL + "/releases/latest",
+      lastModified: new Date(
+        releases[latest.tag_name].published_at,
+      ).toISOString(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: WEBSITE_URL + "/terms-of-services",
+      lastModified: "2026-08-07",
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: WEBSITE_URL + "/privacy-policy",
+      lastModified: "2026-08-07",
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+  ];
+
+  Object.values(releases).forEach((item) => {
+    data.push({
+      url: WEBSITE_URL + "/releases/" + item.tag_name,
+      lastModified: new Date(item.published_at).toISOString(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    });
+  });
+
+  return data;
+}

@@ -30,6 +30,8 @@ export const lightTheme: Theme = {
 
 export const darkTheme: Theme = {
   ...createDarkTheme(defaultTheme),
+  fontFamilyBase:
+    "'Segoe UI', 'Segoe UI Web (West European)', var(--font-inter), -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif",
 };
 
 export const color = "#9EE0FF";

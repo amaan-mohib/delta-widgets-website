@@ -8,6 +8,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Download, Github, ExternalLink, CheckCircle } from "lucide-react";
 import { Button } from "@fluentui/react-components";
+import { APP_NAME } from "@/lib/utils";
 
 export function DownloadSection() {
   return (
@@ -21,8 +22,8 @@ export function DownloadSection() {
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-            Download Delta Widgets and start creating beautiful desktop widgets
-            in minutes. It's completely free and open source.
+            Download {APP_NAME} and start creating beautiful desktop widgets in
+            minutes. It's completely free and open source.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -32,7 +33,7 @@ export function DownloadSection() {
               rel="noopener noreferrer">
               <img
                 src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1005964&theme=dark&t=1755364439573"
-                alt="Delta Widgets - The Ultimate Widget Maker for Windows | Product Hunt"
+                alt={`${APP_NAME} - The Ultimate Widget Maker for Windows | Product Hunt`}
                 style={{ width: "250px", height: "54px" }}
                 width="250"
                 height="54"
@@ -44,7 +45,7 @@ export function DownloadSection() {
               rel="noreferrer">
               <img
                 src="https://peerlist.io/api/v1/projects/embed/PRJHNN7Q9BE6QJJEOFKMJ9D9LJ6K6B?showUpvote=true&theme=dark"
-                alt="Delta Widgets"
+                alt={APP_NAME}
                 style={{ width: "auto", height: "54px" }}
               />
             </a>
@@ -74,7 +75,7 @@ export function DownloadSection() {
                   </Badge>
                 </div>
                 <CardTitle className="text-xl sm:text-2xl md:text-3xl">
-                  Delta Widgets for Windows
+                  {APP_NAME} for Windows
                 </CardTitle>
                 <CardDescription className="text-base sm:text-lg">
                   Free • Open Source • No Registration Required
@@ -108,9 +109,7 @@ export function DownloadSection() {
                     appearance="primary"
                     size="large"
                     as="a"
-                    href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/releases/latest"
                     icon={<Download style={{ width: 20 }} />}>
                     Download Latest Release
                   </Button>

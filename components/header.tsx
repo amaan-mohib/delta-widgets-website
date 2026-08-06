@@ -3,6 +3,8 @@
 import { Button } from "@fluentui/react-components";
 import { Github } from "lucide-react";
 import DiscordIcon from "./Discord";
+import Link from "next/link";
+import { APP_NAME } from "@/lib/utils";
 
 export function Header() {
   return (
@@ -10,31 +12,35 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <div className="shrink-0 flex items-center space-x-3">
+            <Link href="/" className="shrink-0 flex items-center space-x-3">
               <img
                 src="/delta-widgets-icon.png"
-                alt="Delta Widgets"
+                alt={APP_NAME}
                 className="h-8 w-8"
               />
               <h1 className="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent [&:not(:has(.gradient-fallback))]:text-foreground">
-                Delta Widgets
+                {APP_NAME}
               </h1>
-            </div>
+            </Link>
           </div>
 
           <nav className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8 gap-2">
-              <Button as="a" href="#features" appearance="transparent">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <Button as="a" href="/#features" appearance="transparent">
                 Features
               </Button>
-              <Button as="a" href="#screenshots" appearance="transparent">
-                Screenshots
+              <Button
+                as="a"
+                target="_blank"
+                href="https://amaan-mohib.github.io/delta-widgets/"
+                appearance="transparent">
+                Documentation
               </Button>
-              <Button as="a" href="#download" appearance="transparent">
-                Download
+              <Button as="a" href="/releases" appearance="transparent">
+                Releases
               </Button>
-              <Button as="a" href="#sponsor" appearance="transparent">
-                Support
+              <Button as="a" href="/#sponsor" appearance="transparent">
+                Sponsor
               </Button>
             </div>
           </nav>
@@ -59,12 +65,7 @@ export function Header() {
                 GitHub
               </Button>
             </div>
-            <Button
-              as="a"
-              appearance="primary"
-              href="https://github.com/amaan-mohib/delta-widgets/releases/latest"
-              target="_blank"
-              rel="noopener noreferrer">
+            <Button as="a" appearance="primary" href="/releases/latest">
               <span className="hidden sm:inline">Download Free</span>
               <span className="sm:hidden">Download</span>
             </Button>

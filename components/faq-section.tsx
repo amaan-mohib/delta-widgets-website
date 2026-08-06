@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { APP_NAME } from "@/lib/utils";
 
 export function FaqSection() {
   const faqs = [
@@ -11,7 +12,7 @@ export function FaqSection() {
       category: "General Use",
       questions: [
         {
-          question: "Do I need to know coding to use Delta Widgets?",
+          question: `Do I need to know coding to use ${APP_NAME}?`,
           answer:
             "Nope! You can create widgets with the drag-and-drop builder. But if you know HTML/CSS/JS, you can unlock even more customization.",
         },
@@ -22,8 +23,7 @@ export function FaqSection() {
         },
         {
           question: "Does it slow down my PC?",
-          answer:
-            "No. Delta Widgets is built with Tauri + Rust, making it lightweight and efficient compared to older widget frameworks.",
+          answer: `No. ${APP_NAME} is built with Tauri + Rust, making it lightweight and efficient compared to older widget frameworks.`,
         },
         {
           question: "Can I share widgets I make?",
@@ -37,18 +37,15 @@ export function FaqSection() {
       questions: [
         {
           question: "How is this different from Rainmeter?",
-          answer:
-            "Rainmeter is powerful but requires manual configs and a steep learning curve. Delta Widgets offers a modern, drag-and-drop experience, dynamic data, and flexible HTML/CSS styling while staying lightweight.",
+          answer: `Rainmeter is powerful but requires manual configs and a steep learning curve. ${APP_NAME} offers a modern, drag-and-drop experience, dynamic data, and flexible HTML/CSS styling while staying lightweight.`,
         },
         {
           question: "Why not just use Rainmeter skins?",
-          answer:
-            "Rainmeter skins are great but limited to Rainmeter's scripting system. Delta Widgets lets you use modern web standards, giving you more creative freedom and easier customization.",
+          answer: `Rainmeter skins are great but limited to Rainmeter's scripting system. ${APP_NAME} lets you use modern web standards, giving you more creative freedom and easier customization.`,
         },
         {
           question: "Isn't WebView just bloat?",
-          answer:
-            "Not with Tauri. Delta Widgets uses the system's WebView, not a bundled browser. That means it's lightweight, secure, and future-proof, while giving you the flexibility of HTML/CSS/JS.",
+          answer: `Not with Tauri. ${APP_NAME} uses the system's WebView, not a bundled browser. That means it's lightweight, secure, and future-proof, while giving you the flexibility of HTML/CSS/JS.`,
         },
       ],
     },
@@ -77,8 +74,7 @@ export function FaqSection() {
       questions: [
         {
           question: "Is this Windows-only?",
-          answer:
-            "For now, yes. But because Delta Widgets is built with Tauri, support for Linux and macOS is planned for the future.",
+          answer: `For now, yes. But because ${APP_NAME} is built with Tauri, support for Linux and macOS is planned for the future.`,
         },
         {
           question: "Will it always be free?",
@@ -105,7 +101,7 @@ export function FaqSection() {
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to know about Delta Widgets
+            Everything you need to know about {APP_NAME}
           </p>
         </div>
 

@@ -1,10 +1,11 @@
 import {
-  Card,
+  // Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Card } from "@fluentui/react-components";
 import { MousePointer, Layers, Zap, Code, Clock, Palette } from "lucide-react";
 
 const features = [
@@ -67,15 +68,16 @@ export function FeaturesSection() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
               <Card
+                appearance="filled-alternative"
                 key={index}
-                className="text-center hover:shadow-lg transition-shadow">
-                <CardHeader>
+                className="text-center">
+                <CardHeader className="pt-3">
                   <div className="mx-auto h-12 w-12 rounded-lg bg-linear-to-br from-primary to-secondary flex items-center justify-center mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pb-3">
                   <CardDescription className="text-base">
                     {feature.description}
                   </CardDescription>

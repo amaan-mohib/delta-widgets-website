@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "./providers";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { APP_NAME, WEBSITE_CANONICAL_URL, WEBSITE_URL } from "@/lib/utils";
 import "./globals.css";
 
 const inter = Inter({
@@ -12,7 +15,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Delta Widgets - Ultimate Widget Maker for Windows",
+  title: {
+    template: `%s | ${APP_NAME}`,
+    default: `${APP_NAME} - Ultimate Widget Maker for Windows`,
+  },
   description:
     "Create beautiful, dynamic desktop widgets without coding. Drag-and-drop builder, custom templates, and real-time data integration.",
   keywords: [
@@ -28,7 +34,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Amaan Mohib" }],
   creator: "Amaan Mohib",
-  publisher: "Delta Widgets",
+  publisher: APP_NAME,
+  metadataBase: new URL(WEBSITE_URL),
+  alternates: { canonical: WEBSITE_CANONICAL_URL + "/" },
   icons: {
     icon: "/delta-widgets-icon.png",
     shortcut: "/delta-widgets-icon.png",
@@ -37,9 +45,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://delta-widgets.vercel.app",
-    siteName: "Delta Widgets",
-    title: "Delta Widgets - Ultimate Widget Maker for Windows",
+    url: WEBSITE_URL,
+    siteName: APP_NAME,
+    title: `${APP_NAME} - Ultimate Widget Maker for Windows`,
     description:
       "Create beautiful, dynamic desktop widgets without coding. Drag-and-drop builder, custom templates, and real-time data integration.",
     images: [
@@ -47,11 +55,11 @@ export const metadata: Metadata = {
         url: "/delta-widgets-icon.png",
         width: 512,
         height: 512,
-        alt: "Delta Widgets Logo",
+        alt: `${APP_NAME} Logo`,
       },
       {
         url: "/images/design-mode/ss-1.png",
-        alt: "Delta Widgets Logo",
+        alt: `${APP_NAME} Logo`,
       },
     ],
   },
@@ -59,10 +67,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@amaan_mohib",
     creator: "@amaan_mohib",
-    title: "Delta Widgets - Ultimate Widget Maker for Windows",
+    title: `${APP_NAME} - Ultimate Widget Maker for Windows`,
     description:
       "Create beautiful, dynamic desktop widgets without coding. Drag-and-drop builder, custom templates, and real-time data integration.",
-    images: ["/images/design-mode/ss-1.png", "/delta-widgets-icon.png"],
+    images: ["/delta-widgets-icon.png", "/images/design-mode/ss-1.png"],
   },
   robots: {
     index: true,
@@ -94,7 +102,13 @@ html {
         `}</style>
       </head>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="min-h-screen">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
         <Analytics />
       </body>
     </html>

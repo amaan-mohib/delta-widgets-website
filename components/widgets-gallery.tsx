@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { APP_NAME } from "@/lib/utils";
 import {
   Card,
   CardHeader,
@@ -74,7 +75,7 @@ export function WidgetsGallery() {
             Built-in Widgets
           </h2>
           <p className="mt-2 text-lg text-muted-foreground max-w-2xl text-balance">
-            Delta Widgets comes with a collection of powerful, pre-installed
+            {APP_NAME} comes with a collection of powerful, pre-installed
             widgets to get you started immediately.
           </p>
         </div>

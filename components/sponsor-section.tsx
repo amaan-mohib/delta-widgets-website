@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { APP_NAME } from "@/lib/utils";
 import { Heart } from "lucide-react";
 
 export function SponsorSection() {
@@ -21,7 +22,7 @@ export function SponsorSection() {
                   </div>
                 </div>
                 <CardTitle className="text-xl sm:text-2xl md:text-3xl">
-                  Support Delta Widgets
+                  Support {APP_NAME}
                 </CardTitle>
                 <CardDescription className="text-base sm:text-lg px-2">
                   Help keep this project alive and growing. Your support enables
@@ -31,7 +32,7 @@ export function SponsorSection() {
 
               <CardContent className="space-y-4 sm:space-y-6 px-4 sm:px-6">
                 <p className="text-sm sm:text-base text-muted-foreground px-2">
-                  Delta Widgets is a passion project created to make desktop
+                  {APP_NAME} is a passion project created to make desktop
                   customization accessible to everyone. If you find it useful,
                   consider supporting its development.
                 </p>
@@ -50,7 +51,7 @@ export function SponsorSection() {
                 </div>
                 <p className="text-xs sm:text-sm text-muted-foreground px-2">
                   Every contribution, no matter how small, helps maintain and
-                  improve Delta Widgets for the community.
+                  improve {APP_NAME} for the community.
                 </p>
               </CardContent>
             </Card>
