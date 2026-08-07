@@ -141,7 +141,7 @@ export function DownloadSection() {
                     <Button
                       appearance="transparent"
                       as="a"
-                      href="https://amaan-mohib.github.io/delta-widgets/"
+                      href="https://docs.deltawidgets.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       icon={<ExternalLink style={{ width: 16 }} />}

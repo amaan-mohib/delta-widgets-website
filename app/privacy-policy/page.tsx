@@ -13,7 +13,7 @@ When this Policy mentions "We", "Us," and "Our" it refers to ${APP_NAME} and its
 
 This Privacy Policy is governed by our [Terms of Services](/terms-of-services).
 
-For any questions regarding this Policy or any requests regarding the processing of personal data, please contact us at amaan.mohib@gmail.com.
+For any questions regarding this Policy or any requests regarding the processing of personal data, please contact us at contact@deltawidgets.com.
 
 ## 1. INFORMATION WE COLLECT AUTOMATICALLY
 When you use our Site or contact us directly we may collect information, including your personal information, about the way you act in our Site, the services You use and how You use them.
@@ -61,7 +61,7 @@ We will retain your personal information as long as we need it to provide servic
 We have implemented security measures designed to protect the personal information you share with us, including physical, electronic and procedural measures. Among other things, we regularly monitor our systems for possible vulnerabilities and attacks.
 Regardless of the measures and efforts taken by us, the transmission of information via internet, email or text message is not completely secure. We do not guarantee the absolute protection and security of your personal information.
 We therefore encourage you to avoid providing us or anyone with any sensitive information of which you believe its disclosure could cause you substantial or irreparable harm.
-If you have any questions regarding the security of our Site or Services, you are welcome to contact us at amaan.mohib@gmail.com.
+If you have any questions regarding the security of our Site or Services, you are welcome to contact us at contact@deltawidgets.com.
 
 
 ## 9. YOUR RIGHTS

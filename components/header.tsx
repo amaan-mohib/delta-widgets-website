@@ -32,7 +32,7 @@ export function Header() {
               <Button
                 as="a"
                 target="_blank"
-                href="https://amaan-mohib.github.io/delta-widgets/"
+                href="https://docs.deltawidgets.com/"
                 appearance="transparent">
                 Documentation
               </Button>

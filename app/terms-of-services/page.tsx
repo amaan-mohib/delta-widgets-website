@@ -137,7 +137,7 @@ ${APP_NAME}
 
 India
 
-amaan.mohib@gmail.com`;
+contact@deltawidgets.com`;
 
 export const metadata: Metadata = {
   title: "Terms of Services",
