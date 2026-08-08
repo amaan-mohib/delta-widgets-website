@@ -14,6 +14,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       images: [WEBSITE_URL + "/images/design-mode/ss-1.png"],
     },
     {
+      url: WEBSITE_URL + "/download",
+      lastModified: "2026-08-08",
+      changeFrequency: "never",
+      priority: 1,
+    },
+    {
       url: WEBSITE_URL + "/releases",
       lastModified: new Date(
         releases[latest.tag_name].published_at,

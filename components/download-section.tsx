@@ -109,7 +109,7 @@ export function DownloadSection() {
                     appearance="primary"
                     size="large"
                     as="a"
-                    href="/releases/latest"
+                    href="/download"
                     icon={<Download style={{ width: 20 }} />}>
                     Download Latest Release
                   </Button>

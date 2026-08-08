@@ -35,7 +35,7 @@ export function HeroSection() {
             <Button
               size="large"
               as="a"
-              href="/releases/latest"
+              href="/download"
               appearance="primary"
               icon={<Download style={{ width: 20 }} />}>
               Download Free

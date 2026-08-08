@@ -65,7 +65,7 @@ export function Header() {
                 GitHub
               </Button>
             </div>
-            <Button as="a" appearance="primary" href="/releases/latest">
+            <Button as="a" appearance="primary" href="/download">
               <span className="hidden sm:inline">Download Free</span>
               <span className="sm:hidden">Download</span>
             </Button>
