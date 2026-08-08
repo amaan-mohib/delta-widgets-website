@@ -100,6 +100,10 @@ html {
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
         `}</style>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5662195530056920"
+          crossOrigin="anonymous"></script>
       </head>
       <body>
         <Providers>
