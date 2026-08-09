@@ -22,12 +22,13 @@ const Release = async ({ params }: Props) => {
   const { releases, latest } = await getReleases();
   const release =
     slug === "latest" ? releases[latest.tag_name] : releases[slug];
+  const isLatest = slug === "latest" || slug === latest.tag_name;
 
   if (!release) {
     notFound();
   }
 
-  return <ReleasePage release={release} />;
+  return <ReleasePage release={release} isLatest={isLatest} />;
 };
 
 export default Release;

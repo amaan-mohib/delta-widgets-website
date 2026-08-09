@@ -20,12 +20,14 @@ import {
 import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import NextLink from "next/link";
 
 interface ReleaseProps {
   release: IRelease;
+  isLatest: boolean;
 }
 
-const ReleasePage: React.FC<ReleaseProps> = ({ release }) => {
+const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
   const [locale, setLocale] = useState("en-US");
 
   useEffect(() => {
@@ -49,7 +51,7 @@ const ReleasePage: React.FC<ReleaseProps> = ({ release }) => {
               Get the Windows installer for this release. The correct version
               for your system architecture will be detected automatically.
             </Text>
-            <div className="mt-2.5">
+            <div className="mt-2.5 flex items-center gap-2">
               <Button
                 as="a"
                 href={setup?.url}
@@ -57,6 +59,11 @@ const ReleasePage: React.FC<ReleaseProps> = ({ release }) => {
                 appearance="primary">
                 Get {APP_NAME} {release.tag_name || release.name}
               </Button>
+              {!isLatest && (
+                <NextLink href="/releases/latest">
+                  <Button>Get latest version</Button>
+                </NextLink>
+              )}
             </div>
             <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>
               Need a different file? All available assets are listed below.
