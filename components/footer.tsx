@@ -2,7 +2,12 @@
 
 import { Github, ExternalLink } from "lucide-react";
 import DiscordIcon from "./Discord";
-import { APP_NAME } from "@/lib/utils";
+import {
+  APP_NAME,
+  DISCORD_LINK,
+  DOCS_WEBSITE_URL,
+  GITHUB_BASE_LINK,
+} from "@/lib/utils";
 
 export async function Footer() {
   return (
@@ -25,7 +30,7 @@ export async function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://docs.deltawidgets.com/"
+                  href={DOCS_WEBSITE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
@@ -34,7 +39,7 @@ export async function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/amaan-mohib/delta-widgets/releases"
+                  href={`${GITHUB_BASE_LINK}/releases`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
@@ -43,7 +48,7 @@ export async function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/amaan-mohib/delta-widgets/issues"
+                  href={`${GITHUB_BASE_LINK}/issues`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
@@ -52,7 +57,7 @@ export async function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/amaan-mohib/delta-widgets/discussions"
+                  href={`${GITHUB_BASE_LINK}/discussions`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
@@ -67,7 +72,7 @@ export async function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://discord.gg/wDE8KNx8fB"
+                  href={DISCORD_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
@@ -76,7 +81,7 @@ export async function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com/amaan-mohib/delta-widgets/blob/main/CONTRIBUTING.md"
+                  href={`${GITHUB_BASE_LINK}/blob/main/CONTRIBUTING.md`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
@@ -105,8 +110,22 @@ export async function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Legal</h4>
+            <h4 className="font-semibold text-foreground mb-4">Explore</h4>
             <ul className="space-y-2">
+              <li>
+                <a
+                  href="/about"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
+                  Contact
+                </a>
+              </li>
               <li>
                 <a
                   href="/terms-of-services"
@@ -132,7 +151,7 @@ export async function Footer() {
           </p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <a
-              href="https://github.com/amaan-mohib/delta-widgets/blob/main/LICENSE"
+              href={`${GITHUB_BASE_LINK}/blob/main/LICENSE`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors">
@@ -140,14 +159,14 @@ export async function Footer() {
             </a>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/amaan-mohib/delta-widgets"
+                href={GITHUB_BASE_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
                 <Github className="h-4 w-4" />
               </a>
               <a
-                href="https://discord.gg/wDE8KNx8fB"
+                href={DISCORD_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">

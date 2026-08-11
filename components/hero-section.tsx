@@ -1,4 +1,4 @@
-import { APP_NAME } from "@/lib/utils";
+import { APP_NAME, GITHUB_BASE_LINK, WAITLIST_LINK } from "@/lib/utils";
 import { Button, Divider } from "@fluentui/react-components";
 import { Download, Github, Users, Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -45,7 +45,7 @@ export function HeroSection() {
               size="large"
               as="a"
               icon={<Github style={{ width: 20 }} />}
-              href="https://github.com/amaan-mohib/delta-widgets"
+              href={GITHUB_BASE_LINK}
               target="_blank"
               rel="noopener noreferrer">
               View Source
@@ -62,7 +62,7 @@ export function HeroSection() {
               appearance="subtle"
               icon={<Sparkles style={{ width: 16 }} />}
               as="a"
-              href="https://forms.gle/Y7ni54Eknp599nG6A"
+              href={WAITLIST_LINK}
               target="_blank"
               rel="noopener noreferrer">
               Join Marketplace Waitlist

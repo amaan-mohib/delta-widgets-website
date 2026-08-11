@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "./providers";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { APP_NAME, WEBSITE_CANONICAL_URL, WEBSITE_URL } from "@/lib/utils";
+import { APP_NAME, WEBSITE_URL } from "@/lib/utils";
 import "./globals.css";
 
 const inter = Inter({

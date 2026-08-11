@@ -1,6 +1,7 @@
 import { Button } from "@fluentui/react-components";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import DiscordIcon from "./Discord";
+import { DISCORD_LINK, WAITLIST_LINK } from "@/lib/utils";
 
 export function MarketplaceCta() {
   return (
@@ -22,7 +23,7 @@ export function MarketplaceCta() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               as="a"
-              href="https://forms.gle/Y7ni54Eknp599nG6A"
+              href={WAITLIST_LINK}
               target="_blank"
               rel="noopener noreferrer"
               size="large"
@@ -33,7 +34,7 @@ export function MarketplaceCta() {
             </Button>
             <Button
               as="a"
-              href="https://discord.gg/wDE8KNx8fB"
+              href={DISCORD_LINK}
               target="_blank"
               rel="noopener noreferrer"
               size="large"

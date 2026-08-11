@@ -8,7 +8,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Download, Github, ExternalLink, CheckCircle } from "lucide-react";
 import { Button } from "@fluentui/react-components";
-import { APP_NAME } from "@/lib/utils";
+import { APP_NAME, DOCS_WEBSITE_URL, GITHUB_BASE_LINK } from "@/lib/utils";
 
 export function DownloadSection() {
   return (
@@ -117,7 +117,7 @@ export function DownloadSection() {
                     appearance="outline"
                     size="large"
                     as="a"
-                    href="https://github.com/amaan-mohib/delta-widgets"
+                    href={GITHUB_BASE_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     icon={<Github style={{ width: 20 }} />}>
@@ -141,7 +141,7 @@ export function DownloadSection() {
                     <Button
                       appearance="transparent"
                       as="a"
-                      href="https://docs.deltawidgets.com/"
+                      href={DOCS_WEBSITE_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       icon={<ExternalLink style={{ width: 16 }} />}
@@ -151,7 +151,7 @@ export function DownloadSection() {
                     <Button
                       appearance="transparent"
                       as="a"
-                      href="https://github.com/amaan-mohib/delta-widgets/issues"
+                      href={`${GITHUB_BASE_LINK}/issues`}
                       target="_blank"
                       rel="noopener noreferrer"
                       icon={<ExternalLink style={{ width: 16 }} />}

@@ -4,7 +4,12 @@ import { Button } from "@fluentui/react-components";
 import { Github } from "lucide-react";
 import DiscordIcon from "./Discord";
 import Link from "next/link";
-import { APP_NAME } from "@/lib/utils";
+import {
+  APP_NAME,
+  DISCORD_LINK,
+  DOCS_WEBSITE_URL,
+  GITHUB_BASE_LINK,
+} from "@/lib/utils";
 
 export function Header() {
   return (
@@ -32,7 +37,7 @@ export function Header() {
               <Button
                 as="a"
                 target="_blank"
-                href="https://docs.deltawidgets.com/"
+                href={DOCS_WEBSITE_URL}
                 appearance="transparent">
                 Documentation
               </Button>
@@ -51,7 +56,7 @@ export function Header() {
                 as="a"
                 appearance="subtle"
                 icon={<DiscordIcon />}
-                href="https://discord.gg/wDE8KNx8fB"
+                href={DISCORD_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
               />
@@ -59,7 +64,7 @@ export function Header() {
                 as="a"
                 appearance="subtle"
                 icon={<Github />}
-                href="https://github.com/amaan-mohib/delta-widgets"
+                href={GITHUB_BASE_LINK}
                 target="_blank"
                 rel="noopener noreferrer">
                 GitHub
