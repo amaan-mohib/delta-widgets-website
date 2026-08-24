@@ -65,7 +65,7 @@ export function HeroSection() {
               href={WAITLIST_LINK}
               target="_blank"
               rel="noopener noreferrer">
-              Join Marketplace Waitlist
+              Join Gallery Waitlist
             </Button>
           </div>
           <div className="mt-16">

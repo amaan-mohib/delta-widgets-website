@@ -16,7 +16,8 @@ export const DOCS_WEBSITE_URL =
 
 export const WAITLIST_LINK =
   process.env.NEXT_PUBLIC_WAITLIST_LINK ||
-  "https://forms.gle/Y7ni54Eknp599nG6A";
+  "https://gallery.deltawidgets.com/waitlist";
+// "https://forms.gle/Y7ni54Eknp599nG6A";
 
 export const DISCORD_LINK = "https://discord.gg/wDE8KNx8fB";
 
