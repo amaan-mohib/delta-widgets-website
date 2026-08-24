@@ -1,12 +1,13 @@
 "use client";
 
 import { IRelease } from "@/lib/types";
-import { APP_NAME } from "@/lib/utils";
+import { APP_NAME, GITHUB_BASE_LINK } from "@/lib/utils";
 import {
   Button,
-  Caption1,
   Card,
   Link,
+  List,
+  ListItem,
   Table,
   TableBody,
   TableCell,
@@ -15,12 +16,13 @@ import {
   TableRow,
   Text,
   Title1,
-  tokens,
 } from "@fluentui/react-components";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import NextLink from "next/link";
+import { CheckCircleIcon } from "lucide-react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 interface ReleaseProps {
   release: IRelease;
@@ -28,50 +30,93 @@ interface ReleaseProps {
 }
 
 const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
+  const downloadRef = useRef<HTMLButtonElement>(null);
   const [locale, setLocale] = useState("en-US");
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const download = searchParams.get("download");
 
   useEffect(() => {
     setLocale(navigator.language);
   }, []);
 
+  useEffect(() => {
+    if (download !== "true" || !downloadRef.current) return;
+
+    const timeout = setTimeout(() => {
+      downloadRef.current?.click();
+      router.replace(pathname, { scroll: false });
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [download]);
+
   const setup = release.assets.find((i) => i.name.endsWith("-setup.exe"));
+  const version = release.tag_name || release.name;
 
   return (
     <section className="relative py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col gap-2">
         <Title1 as="h1">
-          {APP_NAME} {release.tag_name || release.name}
+          Download {APP_NAME} [{version}]
         </Title1>
-        <div className="md-body mt-5">
-          <Markdown remarkPlugins={[remarkGfm]}>{release.body}</Markdown>
-        </div>
         <div className="flex flex-col gap-2 my-5">
-          <Card appearance="outline">
-            <Text as="p">
-              Get the Windows installer for this release. The correct version
-              for your system architecture will be detected automatically.
-            </Text>
-            <div className="mt-2.5 flex items-center gap-2">
+          <Card appearance="outline" size="large">
+            <div className="pb-2.5 flex items-center gap-2">
               <Button
+                ref={downloadRef}
                 as="a"
                 href={setup?.url}
+                size="large"
                 target="_blank"
                 appearance="primary">
-                Get {APP_NAME} {release.tag_name || release.name}
+                Download for Windows ({version})
               </Button>
               {!isLatest && (
                 <NextLink href="/releases/latest">
-                  <Button>Get latest version</Button>
+                  <Button size="large">Get latest version</Button>
                 </NextLink>
               )}
             </div>
-            <Caption1 style={{ color: tokens.colorNeutralForeground3 }}>
-              Need a different file? All available assets are listed below.
-            </Caption1>
+            <List>
+              {[
+                <span>
+                  Downloaded directly from{" "}
+                  <Link
+                    href={`${GITHUB_BASE_LINK}/releases/tag/${release.tag_name}`}
+                    target="_blank">
+                    GitHub Releases
+                  </Link>
+                </span>,
+                "Open source under GPL-3.0",
+                "Windows 10 & Windows 11",
+              ].map((item) => (
+                <ListItem
+                  className="flex items-center gap-2"
+                  key={item.toString()}>
+                  <CheckCircleIcon size={14} style={{ color: "green" }} />
+                  {item}
+                </ListItem>
+              ))}
+            </List>
+            <Text as="p">
+              The correct installer for your system architecture will be
+              selected automatically.
+            </Text>
           </Card>
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3 my-5">
+          <Title1 as="h1">Release Notes</Title1>
+          <div className="md-body">
+            <Markdown remarkPlugins={[remarkGfm]}>{release.body}</Markdown>
+          </div>
+        </div>
+        <div className="flex flex-col gap-3">
           <Title1 as="h1">Assets</Title1>
+          <Text>Need a different file? Browse all release assets below.</Text>
           <Table className="mt-3">
             <TableHeader>
               <TableRow>
