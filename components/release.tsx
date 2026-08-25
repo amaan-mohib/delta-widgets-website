@@ -1,7 +1,7 @@
 "use client";
 
 import { IRelease } from "@/lib/types";
-import { APP_NAME, GITHUB_BASE_LINK } from "@/lib/utils";
+import { APP_NAME } from "@/lib/utils";
 import {
   Button,
   Card,
@@ -17,12 +17,12 @@ import {
   Text,
   Title1,
 } from "@fluentui/react-components";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import NextLink from "next/link";
 import { CheckCircleIcon } from "lucide-react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 interface ReleaseProps {
   release: IRelease;
@@ -30,44 +30,44 @@ interface ReleaseProps {
 }
 
 const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
-  const downloadRef = useRef<HTMLButtonElement>(null);
   const [locale, setLocale] = useState("en-US");
-  const router = useRouter();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
-  const download = searchParams.get("download");
+  const isDownload = searchParams.get("download") === "true";
+  const setup = release.assets.find((i) => i.name.endsWith("-setup.exe"));
+  const version = release.tag_name || release.name;
 
   useEffect(() => {
     setLocale(navigator.language);
   }, []);
 
   useEffect(() => {
-    if (download !== "true" || !downloadRef.current) return;
+    if (!isDownload || !setup?.url) return;
 
     const timeout = setTimeout(() => {
-      downloadRef.current?.click();
-      router.replace(pathname, { scroll: false });
+      window.location.replace(setup.url);
     }, 1000);
 
     return () => {
       clearTimeout(timeout);
     };
-  }, [download]);
-
-  const setup = release.assets.find((i) => i.name.endsWith("-setup.exe"));
-  const version = release.tag_name || release.name;
+  }, [isDownload]);
 
   return (
     <section className="relative py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col gap-2">
         <Title1 as="h1">
-          Download {APP_NAME} [{version}]
+          Download {APP_NAME} ({version})
         </Title1>
         <div className="flex flex-col gap-2 my-5">
           <Card appearance="outline" size="large">
+            {isDownload && (
+              <Text as="p">
+                Your download should start automatically. If it doesn't, use the
+                button below.
+              </Text>
+            )}
             <div className="pb-2.5 flex items-center gap-2">
               <Button
-                ref={downloadRef}
                 as="a"
                 href={setup?.url}
                 size="large"
@@ -85,9 +85,7 @@ const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
               {[
                 <span>
                   Downloaded directly from{" "}
-                  <Link
-                    href={`${GITHUB_BASE_LINK}/releases/tag/${release.tag_name}`}
-                    target="_blank">
+                  <Link href={release.url} target="_blank">
                     GitHub Releases
                   </Link>
                 </span>,
@@ -102,10 +100,12 @@ const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
                 </ListItem>
               ))}
             </List>
-            <Text as="p">
-              The correct installer for your system architecture will be
-              selected automatically.
-            </Text>
+            {!isDownload && (
+              <Text as="p">
+                The correct installer for your system architecture will be
+                selected automatically.
+              </Text>
+            )}
           </Card>
         </div>
         <div className="flex flex-col gap-3 my-5">
