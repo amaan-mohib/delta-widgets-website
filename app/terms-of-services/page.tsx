@@ -141,6 +141,8 @@ contact@deltawidgets.com`;
 
 export const metadata: Metadata = {
   title: "Terms of Services",
+  description: `The terms of service governing your use of the ${APP_NAME} website and services.`,
+  alternates: { canonical: "/terms-of-services" },
 };
 
 const TOS = async () => {

@@ -90,11 +90,9 @@ export async function Footer() {
               </li>
               <li>
                 <a
-                  href="https://www.buymeacoffee.com/amaan.mohib"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#sponsor"
                   className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
-                  Support <ExternalLink className="h-3 w-3 ml-1" />
+                  Support
                 </a>
               </li>
               <li>
@@ -112,6 +110,27 @@ export async function Footer() {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Explore</h4>
             <ul className="space-y-2">
+              <li>
+                <a
+                  href="/features"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/built-in-widgets"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
+                  Built-in Widgets
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/guides"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
+                  Guides
+                </a>
+              </li>
               <li>
                 <a
                   href="/about"

@@ -1,10 +1,12 @@
 import type React from "react";
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "./providers";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { AdSense } from "@/components/adsense";
 import { APP_NAME, WEBSITE_URL } from "@/lib/utils";
 import "./globals.css";
 
@@ -101,10 +103,6 @@ html {
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
         `}</style>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5662195530056920"
-          crossOrigin="anonymous"></script>
       </head>
       <body>
         <Providers>
@@ -115,6 +113,9 @@ html {
           </div>
         </Providers>
         <Analytics />
+        <Suspense fallback={null}>
+          <AdSense />
+        </Suspense>
       </body>
     </html>
   );

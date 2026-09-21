@@ -34,6 +34,9 @@ export function Header() {
               <Button as="a" href="/#features" appearance="transparent">
                 Features
               </Button>
+              <Button as="a" href="/guides" appearance="transparent">
+                Guides
+              </Button>
               <Button
                 as="a"
                 target="_blank"

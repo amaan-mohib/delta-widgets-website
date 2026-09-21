@@ -1,3 +1,5 @@
+"use client";
+
 import { APP_NAME } from "@/lib/utils";
 import { Card, CardHeader, CardPreview } from "@fluentui/react-components";
 
@@ -45,7 +47,7 @@ export function ScreenshotsSection() {
               <CardPreview>
                 <img
                   src={item.img}
-                  alt={item.title}
+                  alt={`${APP_NAME} ${item.title}: ${item.description}`}
                   className="w-full h-48 sm:h-56 object-contain bg-muted"
                 />
               </CardPreview>

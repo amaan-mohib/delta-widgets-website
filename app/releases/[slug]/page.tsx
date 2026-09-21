@@ -1,6 +1,7 @@
 import ReleasePage from "@/components/release";
 import { getReleases } from "@/lib/data";
-import { Metadata, ResolvingMetadata } from "next";
+import { APP_NAME } from "@/lib/utils";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export const instant = false;
@@ -14,6 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `Release ${slug}`,
+    description: `Release notes and Windows installer for ${APP_NAME} ${slug}.`,
+    alternates: { canonical: `/releases/${slug}` },
   };
 }
 

@@ -1,12 +1,22 @@
+"use client";
+
 import {
-  // Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Card } from "@fluentui/react-components";
-import { MousePointer, Layers, Zap, Code, Clock, Palette } from "lucide-react";
+import { Button, Card } from "@fluentui/react-components";
+import {
+  MousePointer,
+  Layers,
+  Zap,
+  Code,
+  Clock,
+  Palette,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 
 const features = [
   {
@@ -45,9 +55,19 @@ const features = [
       "Fast, secure, and lightweight with native desktop feel. Minimal resource usage.",
     icon: Clock,
   },
+  {
+    title: "AI Assistant (BYOK)",
+    description:
+      "Optional bring-your-own-key assistant. Generate widgets from a prompt with OpenAI, Anthropic, Google, Ollama, or OpenRouter — keys stored encrypted on your device.",
+    icon: Sparkles,
+  },
 ];
 
-export function FeaturesSection() {
+export function FeaturesSection({
+  showLearnMore = true,
+}: {
+  showLearnMore?: boolean;
+}) {
   return (
     <section id="features" className="py-20 sm:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,6 +105,19 @@ export function FeaturesSection() {
               </Card>
             ))}
           </div>
+
+          {showLearnMore && (
+            <div className="mt-12 flex justify-center">
+              <Button
+                as="a"
+                appearance="primary"
+                href="/features"
+                icon={<ArrowRight className="h-4 w-4" />}
+                iconPosition="after">
+                Explore all features
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </section>

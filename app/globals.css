@@ -145,13 +145,13 @@ html.dark {
   }
 
   tr {
-    border-top: 1px solid var(--color-border-muted);
+    border-top: 1px solid var(--colorNeutralForeground3);
   }
 
   td,
   th {
     padding: 6px 13px;
-    border: 1px solid var(--color-border-default);
+    border: 1px solid var(--colorNeutralForeground3);
   }
 
   th {
@@ -177,5 +177,12 @@ html.dark {
   h6 {
     font-size: revert;
     font-weight: revert;
+  }
+
+  pre {
+    background: var(--colorNeutralBackground6);
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 5px 0;
   }
 }

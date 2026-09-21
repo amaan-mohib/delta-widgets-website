@@ -1,69 +1,15 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { APP_NAME } from "@/lib/utils";
+import { builtInWidgets } from "@/lib/widgets";
+import { ArrowRight } from "lucide-react";
 import {
+  Button,
   Card,
   CardHeader,
   CardPreview,
-  Link,
 } from "@fluentui/react-components";
-
-const widgets = [
-  {
-    name: "Date Time",
-    description: (
-      <span>
-        A widget that current date and time. Please{" "}
-        <Link href="https://date-fns.org/docs/format" target="_blank">
-          refer
-        </Link>{" "}
-        for formatting options.
-      </span>
-    ),
-    image: "/templates/datetime/thumb.png",
-  },
-  {
-    name: "Media",
-    description:
-      "A widget that displays media being played on the system, such as music or videos.",
-    image: "/templates/media/thumb.png",
-  },
-  {
-    name: "Audio Visualizer",
-    description:
-      "A widget that visualizes the audio of currently playing media in the form of bars or waveforms.",
-    image: "/templates/visualizer/thumb.png",
-  },
-  {
-    name: "Weather",
-    description:
-      "A widget that displays current weather information for your current location.",
-    image: "/templates/weather/thumb.png",
-  },
-  {
-    name: "Disks",
-    description:
-      "A widget that displays information about the system's disks, including usage and available space.",
-    image: "/templates/disks/thumb.png",
-  },
-  {
-    name: "RAM",
-    description:
-      "A widget that displays information about the system's RAM usage, including total and available memory.",
-    image: "/templates/ram/thumb.png",
-  },
-  {
-    name: "CPU",
-    description:
-      "A widget that displays information about the system's CPU usage and performance.",
-    image: "/templates/cpu/thumb.png",
-  },
-  {
-    name: "Battery",
-    description:
-      "A widget containing information related to the system's battery.",
-    image: "/templates/battery/thumb.png",
-  },
-];
 
 export function WidgetsGallery() {
   return (
@@ -81,13 +27,13 @@ export function WidgetsGallery() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {widgets.map((item) => (
+          {builtInWidgets.map((item) => (
             <Card key={item.name} appearance="filled-alternative" size="large">
               <CardPreview>
                 <div className="shrink-0">
                   <img
                     src={item.image}
-                    alt={item.name}
+                    alt={`${item.name} widget for ${APP_NAME}`}
                     className="w-full h-48 sm:h-56 object-contain bg-muted p-2"
                   />
                 </div>
@@ -100,23 +46,23 @@ export function WidgetsGallery() {
                 }
                 description={
                   <p className="text-sm sm:text-base text-muted-foreground">
-                    {item.description}
+                    {item.details}
                   </p>
                 }
               />
-              {/* <CardContent className="p-0 h-full flex flex-col">
-                <div className="shrink-0">
-
-                </div>
-                <div className="p-4 sm:p-6 flex-1 flex flex-col justify-center">
-                  <div>
-
-
-                  </div>
-                </div>
-              </CardContent> */}
             </Card>
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button
+            as="a"
+            appearance="primary"
+            href="/built-in-widgets"
+            icon={<ArrowRight className="h-4 w-4" />}
+            iconPosition="after">
+            View all widgets
+          </Button>
         </div>
       </div>
     </section>

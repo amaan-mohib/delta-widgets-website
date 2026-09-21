@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -5,8 +7,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { APP_NAME } from "@/lib/utils";
-import { Heart } from "lucide-react";
+import {
+  APP_NAME,
+  BUY_ME_A_COFFEE_LINK,
+  GITHUB_SPONSORS_LINK,
+  GUMROAD_LINK,
+} from "@/lib/utils";
+import { Button } from "@fluentui/react-components";
+import { Heart, Github, Coffee } from "lucide-react";
 
 export function SponsorSection() {
   return (
@@ -39,7 +47,7 @@ export function SponsorSection() {
 
                 <div className="flex justify-center">
                   <a
-                    href="https://www.buymeacoffee.com/amaan.mohib"
+                    href={BUY_ME_A_COFFEE_LINK}
                     target="_blank"
                     rel="noopener noreferrer">
                     <img
@@ -49,6 +57,28 @@ export function SponsorSection() {
                     />
                   </a>
                 </div>
+
+                <div className="flex flex-wrap justify-center gap-3">
+                  <Button
+                    as="a"
+                    appearance="primary"
+                    href={GITHUB_SPONSORS_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    icon={<Github className="h-4 w-4" />}>
+                    GitHub Sponsors
+                  </Button>
+                  <Button
+                    as="a"
+                    appearance="secondary"
+                    href={GUMROAD_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    icon={<Coffee className="h-4 w-4" />}>
+                    Gumroad
+                  </Button>
+                </div>
+
                 <p className="text-xs sm:text-sm text-muted-foreground px-2">
                   Every contribution, no matter how small, helps maintain and
                   improve {APP_NAME} for the community.

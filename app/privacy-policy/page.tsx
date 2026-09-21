@@ -92,6 +92,8 @@ If you have any further questions regarding the data we collect, or how we use i
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  description: `The ${APP_NAME} privacy policy — what information the website collects, why, and how it is used.`,
+  alternates: { canonical: "/privacy-policy" },
 };
 
 const Policy = async () => {

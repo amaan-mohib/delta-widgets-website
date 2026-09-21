@@ -56,6 +56,8 @@ Free and open source desktop widgets for Windows (for now).
 
 export const metadata: Metadata = {
   title: "Contact",
+  description: `Get in touch with the ${APP_NAME} team — report bugs, request features, join the Discord community, or reach out for other inquiries.`,
+  alternates: { canonical: "/contact" },
 };
 
 const Contact = async () => {

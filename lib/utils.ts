@@ -22,3 +22,15 @@ export const WAITLIST_LINK =
 export const DISCORD_LINK = "https://discord.gg/wDE8KNx8fB";
 
 export const GITHUB_BASE_LINK = "https://github.com/amaan-mohib/delta-widgets";
+
+// Date the static marketing pages (home, /features, /built-in-widgets, /guides
+// index) were last meaningfully updated. Bump this when you revise them so the
+// sitemap's lastModified reflects real content changes, not each build.
+export const CONTENT_UPDATED = "2026-09-21";
+
+// Funding links — kept in sync with the app repo's .github/FUNDING.yml
+export const GITHUB_SPONSORS_LINK = "https://github.com/sponsors/amaan-mohib";
+
+export const BUY_ME_A_COFFEE_LINK = "https://buymeacoffee.com/amaan.mohib";
+
+export const GUMROAD_LINK = "https://amaanmohib.gumroad.com/coffee";

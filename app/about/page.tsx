@@ -51,6 +51,8 @@ ${APP_NAME} is available for Windows 10 and Windows 11. Download it for free and
 
 export const metadata: Metadata = {
   title: "About",
+  description: `About ${APP_NAME} — a free and open-source, no-code desktop widget maker for Windows, built with Tauri for a lightweight native experience.`,
+  alternates: { canonical: "/about" },
 };
 
 const About = async () => {
