@@ -12,6 +12,7 @@ export interface BuiltInWidget {
   /** Default canvas size (px), from the manifest dimensions. */
   size: string;
   image: string;
+  key: string;
 }
 
 // Descriptions and variables are derived from each template's manifest.json in
@@ -34,6 +35,7 @@ export const builtInWidgets: BuiltInWidget[] = [
     variables: ["{{time:hh:mm aa}}", "{{date:E MMMM d, yyyy}}"],
     size: "255×90",
     image: "/templates/datetime/thumb.png",
+    key: "datetime",
   },
   {
     name: "Media",
@@ -50,6 +52,7 @@ export const builtInWidgets: BuiltInWidget[] = [
     ],
     size: "420×238",
     image: "/templates/media/thumb.png",
+    key: "media",
   },
   {
     name: "Audio Visualizer",
@@ -60,6 +63,7 @@ export const builtInWidgets: BuiltInWidget[] = [
     variables: ["{{media:title}}", "{{media:artist}}"],
     size: "420×238",
     image: "/templates/visualizer/thumb.png",
+    key: "visualizer-delta-default",
   },
   {
     name: "Weather",
@@ -75,6 +79,7 @@ export const builtInWidgets: BuiltInWidget[] = [
     ],
     size: "270×100",
     image: "/templates/weather/thumb.png",
+    key: "weather",
   },
   {
     name: "Disks",
@@ -85,6 +90,7 @@ export const builtInWidgets: BuiltInWidget[] = [
     variables: [],
     size: "354×103",
     image: "/templates/disks/thumb.png",
+    key: "disk",
   },
   {
     name: "RAM",
@@ -95,6 +101,7 @@ export const builtInWidgets: BuiltInWidget[] = [
     variables: ["{{system:memory_used}}", "{{system:memory_total}}"],
     size: "233×55",
     image: "/templates/ram/thumb.png",
+    key: "ram",
   },
   {
     name: "CPU",
@@ -110,6 +117,7 @@ export const builtInWidgets: BuiltInWidget[] = [
     ],
     size: "368×101",
     image: "/templates/cpu/thumb.png",
+    key: "system",
   },
   {
     name: "Battery",
@@ -123,5 +131,6 @@ export const builtInWidgets: BuiltInWidget[] = [
     ],
     size: "315×135",
     image: "/templates/battery/thumb.png",
+    key: "battery",
   },
 ];

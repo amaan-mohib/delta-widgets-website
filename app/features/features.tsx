@@ -85,9 +85,6 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Capability grid (shared with the homepage) */}
-      <FeaturesSection showLearnMore={false} />
-
       {/* Three creation modes */}
       <section className="py-20 sm:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,6 +125,9 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
+
+      {/* Capability grid (shared with the homepage) */}
+      <FeaturesSection showLearnMore={false} />
 
       {/* Dynamic variables & templates */}
       <section className="py-20 sm:py-28">
@@ -211,20 +211,22 @@ export default function FeaturesPage() {
           <div className="mx-auto max-w-4xl">
             <Card appearance="filled-alternative">
               <CardHeader className="pt-3">
-                <div className="h-12 w-12 rounded-lg bg-linear-to-br from-primary to-secondary flex items-center justify-center mb-4">
-                  <Sparkles className="h-6 w-6 text-white" />
-                </div>
                 <CardTitle className="text-2xl">
                   AI Assistant — bring your own key
                 </CardTitle>
               </CardHeader>
               <CardContent className="pb-3">
-                <CardDescription className="text-base">
+                <CardDescription className="text-base mb-6">
                   An optional assistant that can generate widgets from a prompt
                   and help you explore your data. Connect your own provider key
                   — it runs on your device with keys stored encrypted, and the
                   rest of {APP_NAME} works fully without it.
                 </CardDescription>
+                <img
+                  src="/images/design-mode/ss-assistant.png"
+                  alt="assistant"
+                  style={{ maxWidth: 350, borderRadius: 5 }}
+                />
                 <div className="mt-6 flex flex-wrap gap-2">
                   {aiProviders.map((provider) => (
                     <span

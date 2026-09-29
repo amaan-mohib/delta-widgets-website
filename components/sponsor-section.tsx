@@ -13,7 +13,7 @@ import {
   GITHUB_SPONSORS_LINK,
   GUMROAD_LINK,
 } from "@/lib/utils";
-import { Button } from "@fluentui/react-components";
+import { Button, Divider } from "@fluentui/react-components";
 import { Heart, Github, Coffee } from "lucide-react";
 
 export function SponsorSection() {
@@ -53,30 +53,30 @@ export function SponsorSection() {
                     <img
                       src="/images/design-mode/default-yellow.png"
                       alt="Buy Me A Coffee"
-                      style={{ height: "60px", width: "217px" }}
+                      style={{ height: "45px" }}
                     />
                   </a>
                 </div>
-
+                <Divider>Other Providers</Divider>
                 <div className="flex flex-wrap justify-center gap-3">
                   <Button
                     as="a"
-                    appearance="primary"
                     href={GITHUB_SPONSORS_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     icon={<Github className="h-4 w-4" />}>
                     GitHub Sponsors
                   </Button>
-                  <Button
-                    as="a"
-                    appearance="secondary"
+                  <a
                     href={GUMROAD_LINK}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    icon={<Coffee className="h-4 w-4" />}>
-                    Gumroad
-                  </Button>
+                    rel="noopener noreferrer">
+                    <img
+                      src="/images/design-mode/gumroad.png"
+                      alt="Gumroad Coffee"
+                      style={{ height: 45, borderRadius: 4 }}
+                    />
+                  </a>
                 </div>
 
                 <p className="text-xs sm:text-sm text-muted-foreground px-2">
