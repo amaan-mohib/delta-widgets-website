@@ -14,9 +14,11 @@ export const DOCS_WEBSITE_URL =
   process.env.NEXT_PUBLIC_DOCS_WEBSITE_URL ||
   "https://amaan-mohib.github.io/delta-widgets";
 
+export const GALLERY_LINK =
+  process.env.NEXT_PUBLIC_GALLERY_LINK || "https://gallery.deltawidgets.com";
+
 export const WAITLIST_LINK =
-  process.env.NEXT_PUBLIC_WAITLIST_LINK ||
-  "https://gallery.deltawidgets.com/waitlist";
+  process.env.NEXT_PUBLIC_WAITLIST_LINK || GALLERY_LINK;
 // "https://forms.gle/Y7ni54Eknp599nG6A";
 
 export const DISCORD_LINK = "https://discord.gg/wDE8KNx8fB";

@@ -19,10 +19,15 @@ For any questions regarding this Policy or any requests regarding the processing
 When you use our Site or contact us directly we may collect information, including your personal information, about the way you act in our Site, the services You use and how You use them.
 This information is necessary for the adequate performance of the contract between You and us, to enable us to comply with legal obligations and given our legitimate interest in being able to provide and improve the functionalities of the Site.
 
- - Usage information with Vercel Analytics
+This includes, where applicable:
+
+ - Usage information with Vercel Analytics and other aggregated analytics tools
  - Usage information with Mixpanel
+ - Account and authentication data from Google or GitHub OAuth when you upload or manage widgets in the gallery, including your provider account identifier, email address, display name, and profile image
+ - Widget interaction data such as views, downloads, and upload activity, including when those actions are performed without an account
+ - Device and cache metadata associated with offline-first widget downloads and local caching on your device
 
-
+Anonymous users may still browse and download public widgets without creating an account, but certain events and account-related actions may still be recorded for security, moderation, and service improvement.
 
 ## 2. THE WAY WE USE YOUR INFORMATION
 We process your information adhering to the general data processing principles.
@@ -35,8 +40,7 @@ We will normally collect personal information from you only where we have your c
 
 
 ## 3. COOKIES
-We do not use cookies or other tracking technologies.
-
+We may use essential cookies, browser storage, and related technologies to maintain session state, remember OAuth login status for Google or GitHub sign-in, support persistent preferences, and enable offline-first widget download behavior. Some of this data is required for security and authentication, while other data may be used to improve functionality and support service reliability.
 
 ## 4. INFORMATION FROM MINORS
 This site and our Services are not intended for or directed to persons under the age of 18. We do not knowingly collect or ask for information from minors. We do not knowingly allow minors to use our Site or Services.

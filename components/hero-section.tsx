@@ -1,4 +1,4 @@
-import { APP_NAME, GITHUB_BASE_LINK, WAITLIST_LINK } from "@/lib/utils";
+import { APP_NAME, GALLERY_LINK, GITHUB_BASE_LINK } from "@/lib/utils";
 import { Button, Divider } from "@fluentui/react-components";
 import { Download, Github, Users, Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -26,7 +26,7 @@ export function HeroSection() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
               <Users className="h-4 w-4 text-primary" />
               <span className="text-sm font-semibold text-foreground">
-                1200+ installs
+                1400+ installs
               </span>
             </div>
           </div>
@@ -56,16 +56,16 @@ export function HeroSection() {
           </div>
           <div>
             <p className="text-sm text-muted-foreground mb-4">
-              Help shape our widget community
+              Discover community-made widgets
             </p>
             <Button
               appearance="subtle"
               icon={<Sparkles style={{ width: 16 }} />}
               as="a"
-              href={WAITLIST_LINK}
+              href={GALLERY_LINK}
               target="_blank"
               rel="noopener noreferrer">
-              Join Gallery Waitlist
+              Explore Gallery
             </Button>
           </div>
           <div className="mt-16">

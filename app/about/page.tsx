@@ -2,7 +2,7 @@ import {
   APP_NAME,
   DISCORD_LINK,
   DOCS_WEBSITE_URL,
-  WAITLIST_LINK,
+  GALLERY_LINK,
 } from "@/lib/utils";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
@@ -41,7 +41,7 @@ We're building a community around ${APP_NAME} where people can create, discover,
 
 Explore the documentation, join the community, or share your feedback to help shape what's next.
 
-[Documentation](${DOCS_WEBSITE_URL}) · [Community Gallery - Soon](${WAITLIST_LINK}) · [Join Discord](${DISCORD_LINK})
+[Documentation](${DOCS_WEBSITE_URL}) · [Community Gallery](${GALLERY_LINK}) · [Join Discord](${DISCORD_LINK})
 
 ## Get started
 

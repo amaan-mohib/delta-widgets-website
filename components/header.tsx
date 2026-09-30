@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@fluentui/react-components";
+import { Button, tokens } from "@fluentui/react-components";
 import { Github } from "lucide-react";
 import DiscordIcon from "./Discord";
 import Link from "next/link";
@@ -8,6 +8,7 @@ import {
   APP_NAME,
   DISCORD_LINK,
   DOCS_WEBSITE_URL,
+  GALLERY_LINK,
   GITHUB_BASE_LINK,
 } from "@/lib/utils";
 
@@ -21,11 +22,13 @@ export function Header() {
               <img
                 src="/delta-widgets-icon.png"
                 alt={APP_NAME}
-                className="h-8 w-8"
+                className="h-6 w-6"
               />
-              <h1 className="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent [&:not(:has(.gradient-fallback))]:text-foreground">
+              <span
+                style={{ color: tokens.colorNeutralForeground2 }}
+                className="text-2xl">
                 {APP_NAME}
-              </h1>
+              </span>
             </Link>
           </div>
 
@@ -41,8 +44,12 @@ export function Header() {
                 as="a"
                 target="_blank"
                 href={DOCS_WEBSITE_URL}
-                appearance="transparent">
-                Documentation
+                appearance="transparent"
+                style={{ width: "fit-content" }}>
+                Docs
+              </Button>
+              <Button as="a" href={GALLERY_LINK} appearance="transparent">
+                Gallery
               </Button>
               <Button as="a" href="/releases" appearance="transparent">
                 Releases

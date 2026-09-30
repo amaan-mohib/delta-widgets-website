@@ -2,9 +2,8 @@ import {
   APP_NAME,
   DISCORD_LINK,
   DOCS_WEBSITE_URL,
+  GALLERY_LINK,
   GITHUB_BASE_LINK,
-  WAITLIST_LINK,
-  WEBSITE_URL,
 } from "@/lib/utils";
 import { Metadata } from "next";
 import Markdown from "react-markdown";
@@ -52,7 +51,7 @@ ${APP_NAME} is an independent open-source project, so response times may vary. W
 
 Free and open source desktop widgets for Windows (for now).
 
-[Download](/download) · [Documentation](${DOCS_WEBSITE_URL}) · [Community Gallery - Soon](${WAITLIST_LINK})`;
+[Download](/download) · [Documentation](${DOCS_WEBSITE_URL}) · [Community Gallery](${GALLERY_LINK})`;
 
 export const metadata: Metadata = {
   title: "Contact",
