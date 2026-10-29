@@ -5,8 +5,6 @@ import { APP_NAME } from "@/lib/utils";
 import {
   Button,
   Caption1,
-  Card,
-  CardHeader,
   Divider,
   Table,
   TableBody,

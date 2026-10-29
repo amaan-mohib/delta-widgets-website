@@ -2,13 +2,21 @@ import ReleasePage from "@/components/release";
 import { getReleases } from "@/lib/data";
 import { APP_NAME } from "@/lib/utils";
 import { Metadata } from "next";
+import { cacheLife, cacheTag } from "next/cache";
 import { notFound } from "next/navigation";
-
-export const instant = false;
+import { Suspense } from "react";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateStaticParams() {
+  const { releases } = await getReleases();
+  return [
+    ...Object.values(releases).map((release) => ({ slug: release.tag_name })),
+    { slug: "latest" },
+  ];
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = (await params).slug;
@@ -21,6 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const Release = async ({ params }: Props) => {
+  "use cache";
+  cacheLife("max");
+  cacheTag("releases");
+
   const { slug } = await params;
   const { releases, latest } = await getReleases();
   const release =
@@ -31,7 +43,11 @@ const Release = async ({ params }: Props) => {
     notFound();
   }
 
-  return <ReleasePage release={release} isLatest={isLatest} />;
+  return (
+    <Suspense>
+      <ReleasePage release={release} isLatest={isLatest} />
+    </Suspense>
+  );
 };
 
 export default Release;

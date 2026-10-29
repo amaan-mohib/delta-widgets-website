@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import BuiltInWidgetsPage from "./widgets";
+import { cacheLife } from "next/cache";
 
 export const metadata: Metadata = {
   title: "Built-in Widgets",
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/built-in-widgets" },
 };
 
-export default function BuiltInWidgets() {
+export default async function BuiltInWidgets() {
+  "use cache";
+  cacheLife("max");
+
   return <BuiltInWidgetsPage />;
 }

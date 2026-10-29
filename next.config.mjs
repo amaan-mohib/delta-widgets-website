@@ -4,6 +4,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   cacheComponents: true,
+  partialPrefetching: true,
   experimental: {
     optimizePackageImports: ["@fluentui/react-components"],
   },

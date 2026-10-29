@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@fluentui/react-components";
 import { ArrowRight } from "lucide-react";
 import DiscordIcon from "./Discord";

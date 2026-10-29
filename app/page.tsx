@@ -1,5 +1,3 @@
-"use client";
-
 import { HeroSection } from "@/components/hero-section";
 import { FeaturesSection } from "@/components/features-section";
 import { ScreenshotsSection } from "@/components/screenshots-section";
@@ -9,6 +7,7 @@ import { DownloadSection } from "@/components/download-section";
 import { SponsorSection } from "@/components/sponsor-section";
 import { FaqSection } from "@/components/faq-section";
 import { APP_NAME, WEBSITE_URL } from "@/lib/utils";
+import { cacheLife } from "next/cache";
 
 const softwareAppSchema = {
   "@context": "https://schema.org",
@@ -25,7 +24,10 @@ const softwareAppSchema = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
-export default function Home() {
+export default async function Home() {
+  "use cache";
+  cacheLife("max");
+
   return (
     <main>
       <script
