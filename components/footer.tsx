@@ -6,12 +6,8 @@ import {
   DOCS_WEBSITE_URL,
   GITHUB_BASE_LINK,
 } from "@/lib/utils";
-// import { // cacheLife } from "next/cache";
 
 export async function Footer() {
-  // "use cache";
-  // cacheLife("max");
-
   return (
     <footer className="bg-card border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">

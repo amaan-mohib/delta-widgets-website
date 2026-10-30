@@ -7,7 +7,6 @@ import { DownloadSection } from "@/components/download-section";
 import { SponsorSection } from "@/components/sponsor-section";
 import { FaqSection } from "@/components/faq-section";
 import { APP_NAME, WEBSITE_URL } from "@/lib/utils";
-// import { // cacheLife } from "next/cache";
 
 const softwareAppSchema = {
   "@context": "https://schema.org",
@@ -25,9 +24,6 @@ const softwareAppSchema = {
 };
 
 export default async function Home() {
-  // "use cache";
-  // cacheLife("max");
-
   return (
     <main>
       <script

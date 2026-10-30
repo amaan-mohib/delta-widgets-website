@@ -3,8 +3,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // cacheComponents: true,
-  // partialPrefetching: true,
   output: "export",
   trailingSlash: true,
   images: {
