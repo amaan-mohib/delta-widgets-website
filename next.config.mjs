@@ -13,8 +13,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["@fluentui/react-components"],
   },
-  // basePath:
-  //   process.env.NEXT_PUBLIC_WEBSITE_URL || "https://delta-widgets.vercel.app",
+  basePath: process.env.PAGES_BASE_PATH,
 };
 
 export default nextConfig;
