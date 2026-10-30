@@ -2,7 +2,7 @@ import ReleasesPage from "@/components/releases";
 import { getReleases } from "@/lib/data";
 import { APP_NAME } from "@/lib/utils";
 import { Metadata } from "next";
-import { cacheLife, cacheTag } from "next/cache";
+// import { // cacheLife, cacheTag } from "next/cache";
 
 export const metadata: Metadata = {
   title: "Releases",
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const Releases = async () => {
-  "use cache";
-  cacheLife("max");
-  cacheTag("releases");
+  // "use cache";
+  // cacheLife("max");
+  // cacheTag("releases");
 
   const releases = await getReleases();
 

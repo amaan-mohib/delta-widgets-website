@@ -3,6 +3,8 @@ import { guides } from "@/lib/guides";
 import { CONTENT_UPDATED, WEBSITE_URL } from "@/lib/utils";
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const { releases, latest } = await getReleases();
 

@@ -22,7 +22,6 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import NextLink from "next/link";
 import { CheckCircleIcon } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 
 interface ReleaseProps {
   release: IRelease;
@@ -30,9 +29,8 @@ interface ReleaseProps {
 }
 
 const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
+  const [isDownload, setIsDownload] = useState(false);
   const [locale, setLocale] = useState("en-US");
-  const searchParams = useSearchParams();
-  const isDownload = searchParams.get("download") === "true";
   const setup = release.assets.find((i) => i.name.endsWith("-setup.exe"));
   const version = release.tag_name || release.name;
 
@@ -41,6 +39,10 @@ const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
   }, []);
 
   useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const isDownload = searchParams.get("download") === "true";
+    setIsDownload(isDownload);
+
     if (!isDownload || !setup?.url) return;
 
     const timeout = setTimeout(() => {
@@ -50,7 +52,7 @@ const ReleasePage: React.FC<ReleaseProps> = ({ release, isLatest }) => {
     return () => {
       clearTimeout(timeout);
     };
-  }, [isDownload]);
+  }, []);
 
   return (
     <section className="relative py-10">

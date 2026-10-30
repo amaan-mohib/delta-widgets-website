@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import FeaturesPage from "./features";
-import { cacheLife } from "next/cache";
+// import { // cacheLife } from "next/cache";
 
 export const metadata: Metadata = {
   title: "Features",
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default async function Features() {
-  "use cache";
-  cacheLife("max");
+  // "use cache";
+  // cacheLife("max");
 
   return <FeaturesPage />;
 }

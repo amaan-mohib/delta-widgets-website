@@ -74,7 +74,7 @@ const ReleasesPage: React.FC<IProps> = ({ releases: { releases, latest } }) => {
               <TableRow key={item.id}>
                 <TableCell>
                   <Link
-                    href={`/releases/${item.tag_name || item.name}`}
+                    href={`/releases/${item.tag_name || item.name}/`}
                     className="underline text-primary">
                     {item.tag_name || item.name}
                   </Link>

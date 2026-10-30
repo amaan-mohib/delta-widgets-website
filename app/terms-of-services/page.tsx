@@ -1,6 +1,6 @@
 import { APP_NAME, WEBSITE_URL } from "@/lib/utils";
 import { Metadata } from "next";
-import { cacheLife } from "next/cache";
+// import { // cacheLife } from "next/cache";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -150,8 +150,8 @@ export const metadata: Metadata = {
 };
 
 const TOS = async () => {
-  "use cache";
-  cacheLife("max");
+  // "use cache";
+  // cacheLife("max");
 
   return (
     <section className="py-10 md-body container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

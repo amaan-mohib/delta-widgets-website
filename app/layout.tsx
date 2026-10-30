@@ -112,7 +112,7 @@ html {
             <Footer />
           </div>
         </Providers>
-        <Analytics />
+        {/* <Analytics /> */}
         <Suspense fallback={null}>
           <AdSense />
         </Suspense>
