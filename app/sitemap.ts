@@ -33,6 +33,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: WEBSITE_URL + "/about",
+      lastModified: new Date("2026-11-12"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: WEBSITE_URL + "/contact",
+      lastModified: new Date("2026-11-12"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: WEBSITE_URL + "/download",
       lastModified: new Date(releases[latest.tag_name].published_at),
       changeFrequency: "never",
@@ -52,13 +64,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: WEBSITE_URL + "/terms-of-services",
-      lastModified: "2026-08-07",
+      lastModified: new Date("2026-11-12"),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: WEBSITE_URL + "/privacy-policy",
-      lastModified: "2026-08-07",
+      lastModified: new Date("2026-11-12"),
       changeFrequency: "monthly",
       priority: 0.5,
     },

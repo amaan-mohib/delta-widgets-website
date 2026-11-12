@@ -4,96 +4,101 @@ import { cacheLife } from "next/cache";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const policy = `# PRIVACY POLICY
+const policy = `# Privacy Policy
 
-Your privacy is important to us, so ${APP_NAME}, a service provider based in the IN, has created the following Privacy Policy ("Policy") to let you know what information we collect when you visit our Site ${WEBSITE_URL} ("Site"), why we collect it and how we use it.
+Last updated: 2026-11-12
 
-The terms "You," "Your," "Yours" and "User" refer to the entity/person/organization using our Site.
-When this Policy mentions "We", "Us," and "Our" it refers to ${APP_NAME} and its subsidiaries and affiliates.
+Delta Widgets ("we", "our", "us") is an independent open-source project for Windows desktop widgets. This privacy policy explains what information we collect through our website, gallery, documentation, and related services, and how we use it.
 
+This policy applies to the Delta Widgets website and public gallery at ${WEBSITE_URL}. It does not apply to third-party websites or projects linked from our site.
 
-This Privacy Policy is governed by our [Terms of Services](/terms-of-services).
+## 1. Who we are
 
-For any questions regarding this Policy or any requests regarding the processing of personal data, please contact us at contact@deltawidgets.com.
+Delta Widgets is an independent project maintained by contributors and the primary project maintainer on GitHub. For support or privacy requests, contact us at contact@deltawidgets.com.
 
-## 1. INFORMATION WE COLLECT AUTOMATICALLY
-When you use our Site or contact us directly we may collect information, including your personal information, about the way you act in our Site, the services You use and how You use them.
-This information is necessary for the adequate performance of the contract between You and us, to enable us to comply with legal obligations and given our legitimate interest in being able to provide and improve the functionalities of the Site.
+## 2. Information we collect
 
-This includes, where applicable:
+Depending on how you use the site, we may collect:
 
- - Usage information with Vercel Analytics and other aggregated analytics tools
- - Usage information with Mixpanel
- - Account and authentication data from Google or GitHub OAuth when you upload or manage widgets in the gallery, including your provider account identifier, email address, display name, and profile image
- - Widget interaction data such as views, downloads, and upload activity, including when those actions are performed without an account
- - Device and cache metadata associated with offline-first widget downloads and local caching on your device
+- Account and authentication data from Google or GitHub OAuth when you create or manage a gallery listing, including your name, email address, profile image, and provider account identifier.
+- Public gallery activity such as widget views, downloads, uploads, comments, and moderation actions.
+- Technical data such as IP address, browser type, operating system, device information, page visits, referrer URLs, timestamps, and traffic analytics.
+- Cookies, local storage, and related browser storage to remember sessions, OAuth sign-in state, saved preferences, and offline-first widget downloads.
+- Contact and support messages you send to us by email or through project channels.
 
-Anonymous users may still browse and download public widgets without creating an account, but certain events and account-related actions may still be recorded for security, moderation, and service improvement.
+We do not sell personal information. We may share limited information with service providers that help operate the website, analytics, and authentication features.
 
-## 2. THE WAY WE USE YOUR INFORMATION
-We process your information adhering to the general data processing principles.
-We may use the information we collect through our Site for a number of reasons, including to:
+## 3. How we use your information
 
- - to create statistics and analyze market
- - to improve services
+We use information to:
 
-We will normally collect personal information from you only where we have your consent to do so, where we need the personal information to perform a contract with you, or where the processing is in our legitimate business interests.
+- operate and secure the website and gallery;
+- verify account access and manage widget submissions;
+- monitor the quality and safety of uploads;
+- improve the website, documentation, features, and product experience;
+- analyze usage trends and technical reliability;
+- respond to support requests and legal obligations.
 
+## 4. Analytics and traffic measurement
 
-## 3. COOKIES
-We may use essential cookies, browser storage, and related technologies to maintain session state, remember OAuth login status for Google or GitHub sign-in, support persistent preferences, and enable offline-first widget download behavior. Some of this data is required for security and authentication, while other data may be used to improve functionality and support service reliability.
+We may use third-party analytics tools such as Vercel Analytics and Mixpanel to understand site usage and improve performance. These tools may collect information about page views, device and browser details, time spent, and interaction patterns. This data is aggregated or pseudonymized where available and used for product and website improvement.
 
-## 4. INFORMATION FROM MINORS
-This site and our Services are not intended for or directed to persons under the age of 18. We do not knowingly collect or ask for information from minors. We do not knowingly allow minors to use our Site or Services.
-We will delete any information we discover is collected from a minor. Please contact us using the contact details below if you believe we might have information about a minor.
+## 5. Advertising and third-party cookies
 
+We may allow third-party advertising and analytics partners, including Google, to use cookies, web beacons, device identifiers, and similar technologies on this website. These technologies may collect information about your visits to our site and other sites to help measure advertising effectiveness and provide personalized or non-personalized ads.
 
-## 5. SENSITIVE INFORMATION
-We do not collect sensitive information such as political opinions, religious or philosophical beliefs, racial or ethnic origin, genetic data, biometric data, health data or data related a sexual orientation.
-Please do not send, upload, or provide us any sensitive data and contact us using the contact details below if you believe that we might have such information. We have a right to delete any information we believe it might contain sensitive data.
+Google and its partners may use cookies to serve ads based on your prior visits to our website or other sites. You can opt out of personalized advertising in Google Ads Settings at https://adssettings.google.com/ and learn more about ad cookies and privacy at https://policies.google.com/technologies/ads.
 
+You may also opt out of certain third-party advertising cookies through the Digital Advertising Alliance or the Network Advertising Initiative at https://www.aboutads.info/choices/ or https://optout.networkadvertising.org/. For more information on how Google uses data when you use its partners' sites or apps, see https://policies.google.com/technologies/partner-sites.
 
-## 6. THIRD PARTY LINKS
-Our Site may have links to other websites. Please review their privacy policies to learn more about how they collect and use your personal data, because we do not control their policies and personal data processing practices.
+## 6. Cookies and browser storage
 
+We use essential cookies and browser storage to:
 
-## 7. RETENTION
-We retain your personal information to provide services to you and as otherwise necessary to comply with our legal obligation, resolve disputes, and enforce our agreements.
-We will retain your personal information as long as we need it to provide services to you, unless we are otherwise required by law or regulations to retain your personal information longer.
+- keep you signed in when required;
+- remember site preferences;
+- maintain session security;
+- support file and widget caching for offline use;
+- help with analytics and service performance.
 
+If you disable cookies, some site features may not function correctly.
 
-## 8. SECURITY
-We have implemented security measures designed to protect the personal information you share with us, including physical, electronic and procedural measures. Among other things, we regularly monitor our systems for possible vulnerabilities and attacks.
-Regardless of the measures and efforts taken by us, the transmission of information via internet, email or text message is not completely secure. We do not guarantee the absolute protection and security of your personal information.
-We therefore encourage you to avoid providing us or anyone with any sensitive information of which you believe its disclosure could cause you substantial or irreparable harm.
-If you have any questions regarding the security of our Site or Services, you are welcome to contact us at contact@deltawidgets.com.
+## 7. User-generated content and public gallery
 
+By uploading or publishing content to the public gallery, you may make it visible to other visitors. We may display, host, moderate, and retain that content in connection with the gallery. Public gallery content may be indexed or viewed by other users and search engines in accordance with the gallery's public nature.
 
-## 9. YOUR RIGHTS
-You are entitled to a range of rights regarding the protection of your personal information. Those rights are:
+## 8. Third-party links
 
- - The right to access the information we have about you. If you wish to access your personal information that we collect, you can do so at any time by contacting us using the contact details provided below.
- - The right to rectify inaccurate information about you. You can correct, update or request deletion of your personal information by contacting us using the contact details provided below.
- - The right to object the processing. When we rely on your consent to process your personal information, you may withdraw consent at any time by contacting us using the contact details provided below. This will not affect the lawfulness of processing prior to the withdrawal of your consent.
- - The right to lodge a complaint. You can raise questions or complaints to the national Data Protection Agency in your country of residence in the event where your rights may have been infringed. However, we recommend attempting to reach a peaceful resolution of the possible dispute by contacting us first.
- - The right to erase any data concerning you. You may demand erasure of data without undue delay for legitimate reasons, e.g. where data is no longer necessary for the purposes it was collected, or where the data has been unlawfully processed.
+Our site may contain links to GitHub, documentation, Discord, or external services. We are not responsible for the privacy practices of those third parties. Please review their policies before providing information to them.
 
+## 9. Data retention
 
+We retain personal information only for as long as necessary to provide services, fulfill legal obligations, resolve disputes, protect security, and improve the product. If you delete an account or request data removal, we may keep limited records where required by law or necessary for legitimate business purposes.
 
-## 10. APPLICATION OF POLICY
-This Policy was created with the help of the [TermsHub.io](https://termshub.io?utm_source=referral&utm_medium=generated_documents&utm_campaign=referral_documents&utm_content=pp_th_text) and the [Privacy Policy Generator](https://termshub.io/privacy-policy?utm_source=referral&utm_medium=generated_documents&utm_campaign=referral_documents&utm_content=pp_th_text) and applies only to the services offered by our Company. Our Policy does not apply to services offered by other companies or individuals, including products or sites that may be displayed to you in search results, sites that may include our services or other sites linked from our Site or Services.
+## 10. Security
 
+We use reasonable administrative, technical, and organizational measures to protect information. However, no system is completely secure, and no method of transmission or storage is guaranteed to be 100% secure. Please avoid sending sensitive personal information through public channels.
 
-## 11. AMENDMENTS
-Our Policy may change from time to time. We will post any Policy changes on our Site and, if the changes are significant, we may consider providing a more explicit notice (including, for certain services, email notification of Policy changes).
+## 11. Your rights
 
+Depending on your location, you may have rights to access, correct, delete, restrict, or object to certain personal data processing. To exercise these rights, contact us at contact@deltawidgets.com. We will respond as required by applicable law.
 
-## 12. ACCEPTANCE OF THIS POLICY
-We assume that all Users of this Site have carefully read this document and agree to its contents. If someone does not agree with this Policy, they should refrain from using our Site. We reserve the right to change our Policy at any time and inform by using the way as indicated in Section 11. Continued use of this Site implies acceptance of the revised Policy.
+## 12. Children's privacy
 
+The website and services are not intended for children under 13, and we do not knowingly collect personal information from children under 13. If we become aware of such data, we will delete it promptly.
 
-## 13. FURTHER INFORMATION
-If you have any further questions regarding the data we collect, or how we use it, then please feel free to contact us at the details as indicated above.`;
+## 13. Changes to this policy
+
+We may update this privacy policy from time to time. If we make material changes, we will post the revised version on this page with a new "Last updated" date. Continued use of the site after changes are published constitutes acceptance of the revised policy.
+
+## 14. Contact
+
+For questions about this privacy policy or data requests, contact:
+
+Delta Widgets
+Email: contact@deltawidgets.com
+GitHub: https://github.com/amaan-mohib/delta-widgets
+`;
 
 export const metadata: Metadata = {
   title: "Privacy Policy",

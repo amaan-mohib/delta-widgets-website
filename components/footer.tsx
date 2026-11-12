@@ -59,6 +59,13 @@ export async function Footer() {
               </li>
               <li>
                 <a
+                  href="/contact"
+                  className="text-muted-foreground hover:text-primary transition-colors inline-flex items-center">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
                   href={`${GITHUB_BASE_LINK}/discussions`}
                   target="_blank"
                   rel="noopener noreferrer"

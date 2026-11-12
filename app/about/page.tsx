@@ -10,45 +10,46 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 const about = `# About ${APP_NAME}
-## Desktop widgets, without the complexity
 
-${APP_NAME} is a free and open-source widget maker for Windows. It lets you create beautiful, dynamic desktop widgets without writing code.
+## A free, independent project for Windows desktop customization
 
-With a visual drag-and-drop builder, custom templates, real-time data, expressions, variables, and support for web content, ${APP_NAME} gives you the tools to build widgets that fit your desktop and your workflow.
+${APP_NAME} is a free and open-source widget maker for Windows. It helps you build custom desktop widgets without writing code, with a visual editor, templates, and support for dynamic data.
 
-## Built for customization
+## Who builds it
 
-Whether you want a simple clock, system information, a media display, weather, or something completely custom, ${APP_NAME} is designed to make desktop customization accessible without requiring you to learn a programming language.
+${APP_NAME} is an independent open-source project maintained by the project contributors and the primary maintainer, Amaan Mohib, on GitHub. The project is developed in public and shaped by community feedback, pull requests, and discussions.
 
-Start with a template, build something from scratch, or use existing web content as a widget.
+- [GitHub](https://github.com/amaan-mohib)
+- [Project repository](https://github.com/amaan-mohib/delta-widgets)
+- [Community Discord](${DISCORD_LINK})
+- Email: contact@deltawidgets.com
+
+## Why it exists
+
+The project was started to make desktop customization more approachable. Rather than requiring technical setup or complex development workflows, ${APP_NAME} aims to give people an accessible way to create useful, personal, and beautiful widgets for their desktop.
+
+## Development philosophy
+
+We believe desktop customization should be:
+
+- open and transparent;
+- easy to explore and learn;
+- flexible enough for power users;
+- respectful of community contributions.
+
+The project is built in public on GitHub and welcomes issues, ideas, and improvements from the community.
 
 ## Free and open source
 
-${APP_NAME} is free to use and open source under the GPL-3.0 license.
+${APP_NAME} is free to use and open source under the GPL-3.0 license. The code, documentation, and project roadmap are publicly available so users can inspect, contribute, and adapt the project.
 
 The project is built with Tauri to provide a lightweight native desktop experience while keeping the flexibility of web technologies.
-
-The source code is publicly available, and contributions, feedback, and ideas from the community are welcome.
-
-## Built independently
-
-${APP_NAME} is an independent project built around a simple idea: desktop customization should be powerful without being complicated.
-
-The project is continuously evolving through new features, community feedback, and contributions from users.
-
-## Join the community
-
-We're building a community around ${APP_NAME} where people can create, discover, and share widgets.
-
-Explore the documentation, join the community, or share your feedback to help shape what's next.
-
-[Documentation](${DOCS_WEBSITE_URL}) · [Community Gallery](${GALLERY_LINK}) · [Join Discord](${DISCORD_LINK})
 
 ## Get started
 
 ${APP_NAME} is available for Windows 10 and Windows 11. Download it for free and start creating your own widgets.
 
-[Download ${APP_NAME}](/download)`;
+[Download ${APP_NAME}](/download) · [Documentation](${DOCS_WEBSITE_URL}) · [Community Gallery](${GALLERY_LINK}) · [Report an issue](https://github.com/amaan-mohib/delta-widgets/issues)`;
 
 export const metadata: Metadata = {
   title: "About",
